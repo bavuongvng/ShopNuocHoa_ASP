@@ -1,0 +1,175 @@
+﻿. {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+.logo {
+    width: 25%;
+    overflow: hidden;
+}
+
+.search {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+    .search .search-form {
+        width: 70%;
+    }
+
+    .search .ddl-search {
+        width: 30%;
+    }
+
+    .search .btn-search {
+        top: 0;
+        right: 0;
+    }
+
+.login {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+    .login > div {
+        margin-right: 20px;
+    }
+
+    .login a {
+        display: block;
+    }
+
+    .login > div > a:hover {
+        color: red !important;
+        cursor: pointer;
+    }
+
+.menu-parent {
+    z-index: 1;
+}
+
+    .menu-parent > li:hover .submenu {
+        display: flex !important;
+    }
+
+    .menu-parent > li > a {
+        font-size: 23px;
+    }
+
+        .menu-parent > li > a > i {
+            margin-top: 6px;
+        }
+
+.submenu {
+    display: none !important;
+}
+
+    .submenu > li {
+        background-color: burlywood;
+        width: 100%;
+    }
+
+        .submenu > li:hover {
+            background-color: aqua;
+        }
+
+    .submenu li:hover .subsubmenu {
+        display: flex !important;
+    }
+
+.subsubmenu {
+    top: 0;
+    right: -167px;
+    width: 100%;
+    display: none !important;
+}
+
+    .subsubmenu > li {
+        background-color: brown;
+    }
+
+
+/*Tranchu.aspx*/
+.silde-img {
+    text-align: center;
+}
+
+/*Nuochoatheodanhmuc.aspx*/
+.list-nuoc-hoa {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto; /*6 cot auto*/
+    grid-gap: 10px;
+    margin-top:40px;
+}
+
+    .list-nuoc-hoa a {
+        color: black !important;
+        transition: .4s;
+    }
+
+        .list-nuoc-hoa a:hover {
+            text-decoration: none;
+            color: black !important;
+            box-shadow: 5px 5px 10px #ccc;
+        }
+
+.nuoc-hoa {
+    /*width: 20%;*/
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    padding:10px 0;
+}
+
+    .nuoc-hoa p {
+        font-weight:bold;
+        padding-left:10px;
+    }
+
+.ten-nuoc-hoa {
+    color: black;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+}
+
+.gia-nuoc-hoa {
+    display: block;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+/*Footer*/
+footer {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer {
+}
+
+    .footer div {
+        flex-grow: 1;
+    }
+
+        .footer div p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .footer div a {
+            display: block;
+        }
+
+            .footer div a:hover {
+                cursor: pointer;
+                color: red !important;
+            }
