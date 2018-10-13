@@ -61,8 +61,9 @@
                                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/DangNhap.aspx">Đăng nhập</asp:HyperLink>
                                 <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/DangKy.aspx">Đăng ký</asp:HyperLink>
                             </div>
-                            <asp:HyperLink ID="HyperLink3" runat="server">
+                            <asp:HyperLink CssClass="position-relative" ID="giohang" runat="server" NavigateUrl="~/GioHang.aspx">
                             <i class="material-icons" style="font-size:50px;">shopping_cart</i>
+                                <span class="badge badge-danger position-absolute">10</span>
                             </asp:HyperLink>
 
                         </div>

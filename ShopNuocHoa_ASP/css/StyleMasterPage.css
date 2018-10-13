@@ -1,7 +1,9 @@
-﻿. {
+﻿.{
     box-sizing: border-box;
 }
-
+a:hover{
+    text-decoration:none !important;
+}
 body {
     background-color: #fff;
 }
@@ -48,7 +50,13 @@ body {
         color: red !important;
         cursor: pointer;
     }
-
+#giohang i{
+    color:black !important;
+}
+#giohang span {
+    top: -5px;
+    right: 0;
+}
 .menu-parent {
     z-index: 1;
 }
