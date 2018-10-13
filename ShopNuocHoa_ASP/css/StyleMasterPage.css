@@ -1,9 +1,15 @@
-﻿.{
+﻿. {
     box-sizing: border-box;
 }
-a:hover{
-    text-decoration:none !important;
+
+a {
+    color: black !important;
 }
+
+    a:hover {
+        text-decoration: none !important;
+    }
+
 body {
     background-color: #fff;
 }
@@ -51,16 +57,24 @@ body {
         color: red !important;
         cursor: pointer;
     }
-#giohang i{
-    color:black !important;
+
+#giohang i {
+    color: black !important;
 }
+
 #giohang span {
     top: -5px;
     right: 0;
 }
+
 .menu-parent {
     z-index: 1;
 }
+
+    .menu-parent li {
+        padding: 5px 10px;
+        text-align: left;
+    }
 
     .menu-parent > li:hover .submenu {
         display: flex !important;
@@ -81,11 +95,16 @@ body {
     .submenu > li {
         background-color: burlywood;
         width: 100%;
+        border: .5px solid white;
     }
 
-        .submenu > li:hover {
-            background-color: aqua;
-        }
+    .submenu a {
+        color: white !important;
+    }
+
+    .submenu > li:hover {
+        background-color: #188df3;
+    }
 
     .submenu li:hover .subsubmenu {
         display: flex !important;
@@ -93,7 +112,7 @@ body {
 
 .subsubmenu {
     top: 0;
-    right: -167px;
+    right: -187px;
     width: 100%;
     display: none !important;
 }
@@ -101,6 +120,10 @@ body {
     .subsubmenu > li {
         background-color: brown;
     }
+
+        .subsubmenu > li:hover {
+            background-color: coral;
+        }
 
 
 /*Tranchu.aspx*/
@@ -113,7 +136,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto; /*6 cot auto*/
     grid-gap: 10px;
-    margin-top:40px;
+    margin-top: 40px;
 }
 
     .list-nuoc-hoa a {
@@ -131,12 +154,12 @@ body {
     /*width: 20%;*/
     background-color: white;
     border: 1px solid #d4d4d4;
-    padding:10px 0;
+    padding: 10px 0;
 }
 
     .nuoc-hoa p {
-        font-weight:bold;
-        padding-left:10px;
+        font-weight: bold;
+        padding-left: 10px;
     }
 
 .ten-nuoc-hoa {
@@ -161,24 +184,25 @@ footer {
     padding-bottom: 20px;
 }
 
-.footer {
+.footer a {
+    color: white !important;
 }
 
-    .footer div {
-        flex-grow: 1;
+.footer div {
+    flex-grow: 1;
+}
+
+    .footer div p {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
     }
 
-        .footer div p {
-            margin-bottom: 20px;
-            font-size: 20px;
-            font-weight: bold;
-        }
+    .footer div a {
+        display: block;
+    }
 
-        .footer div a {
-            display: block;
+        .footer div a:hover {
+            cursor: pointer;
+            color: red !important;
         }
-
-            .footer div a:hover {
-                cursor: pointer;
-                color: red !important;
-            }
