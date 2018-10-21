@@ -5,25 +5,31 @@
 <html>
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="css/StyleMasterPage.css" rel="stylesheet" />
 
+
+    <%--bootstrap--%>
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>--%>
 
-    <link rel="stylesheet" type="text/css" href="css/StyleMasterPage.css" />
-    <link rel="stylesheet" type="text/css" href="fonts/material-icons.css" /> <%--Icon fonts--%>
-    <%-- google icon font--%>
+    <%--off line--%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <%--gg fonr--%>
+    <link rel="stylesheet" type="text/css" href="fonts/material-icons.css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <header class="mt-3">
+            <header style="background-color: antiquewhite;" class="mt-3">
                 <div class="container">
                     <%--Top-Header (contain logo,search, and login)--%>
                     <div class="d-flex">
@@ -75,41 +81,11 @@
                     <div class="d-flex mt-3">
                         <ul class="menu-parent nav d-flex position-relative">
                             <li class="nav-item">
-                                <asp:HyperLink CssClass="nav-link d-flex justify-content-center" ID="HyperLink5" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx">
+                                <asp:HyperLink CssClass="nav-link d-flex justify-content-center" ID="HyperLink5" runat="server" NavigateUrl="~/DanhMucNuocHoa.aspx">
                                     <i class="material-icons" style="font-size:23px">menu</i>
                                     Danh mục
                                     <i class="material-icons" style="font-size:23px">expand_more</i>
                                 </asp:HyperLink>
-                                <ul class="submenu nav d-flex flex-column position-absolute">
-                                    <li class="nav-item position-relative">
-                                        <asp:HyperLink CssClass="nav-link" ID="HyperLink11" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-nam/">Nước hoa cho nam</asp:HyperLink>
-                                        <ul class="subsubmenu nav position-absolute  d-flex flex-column">
-                                            <li class="nav-item">
-                                                <asp:HyperLink CssClass="nav-link" ID="HyperLink13" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-mini-nam/">Mini</asp:HyperLink>
-                                            </li>
-                                            <li class="nav-item">
-                                                <asp:HyperLink CssClass="nav-link" ID="HyperLink14" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-tester-nam/">Tester</asp:HyperLink>
-                                            </li>
-                                            <li class="nav-item">
-                                                <asp:HyperLink CssClass="nav-link" ID="HyperLink15" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-vial-nam/">Vial</asp:HyperLink>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item position-relative">
-                                        <asp:HyperLink CssClass="nav-link" ID="HyperLink12" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-nu/">Nước hoa cho nữ</asp:HyperLink>
-                                        <ul class="subsubmenu nav  position-absolute d-flex flex-column">
-                                            <li class="nav-item">
-                                                <asp:HyperLink CssClass="nav-link" ID="HyperLink16" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-mini-nu/">Mini</asp:HyperLink>
-                                            </li>
-                                            <li class="nav-item">
-                                                <asp:HyperLink CssClass="nav-link" ID="HyperLink17" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-tester-nu/">Tester</asp:HyperLink>
-                                            </li>
-                                            <li class="nav-item">
-                                                <asp:HyperLink CssClass="nav-link" ID="HyperLink18" runat="server" NavigateUrl="~/NuocHoaTheoDanhMuc.aspx/nuoc-hoa-vial-nu/">Vial</asp:HyperLink>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
                             </li>
                             <li class="nav-item">
                                 <asp:HyperLink CssClass="nav-link" ID="HyperLink6" runat="server" NavigateUrl="~/Trangchu.aspx">SP khuyến mãi</asp:HyperLink>
