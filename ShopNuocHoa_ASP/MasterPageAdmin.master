@@ -32,16 +32,21 @@
         <div class="content">
             <div class="menu-left">
                 <div class="menu">
-                    <asp:HyperLink CssClass="items-menu menu-active" ID="HyperLink2" runat="server" NavigateUrl="~/TrangChuAdmin.aspx">Trang chủ</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu menu-active" ID="HyperLink3" runat="server" NavigateUrl="~/QuanLyDanhMucAdmin.aspx">
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink2" runat="server" NavigateUrl="~/TrangChuAdmin.aspx">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Img/Logo.png" Width="100%" />
+                    </asp:HyperLink>
+                    <hr style="background-color: white" />
+                    <asp:HyperLink CssClass="items-menu menu-active" ID="HyperLink3" runat="server" NavigateUrl="~/QuanLyDanhMuc.aspx">
                         <i class="material-icons">dashboard</i>
                         Quản Lý danh mục</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu menu-active" ID="HyperLink4" runat="server" NavigateUrl="~/QuanLyDanhMucAdmin.aspx">Quản Lý sản phẩm</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu" ID="HyperLink5" runat="server" NavigateUrl="~/QuanLyDanhMucAdmin.aspx">Quản Lý đơn hàng</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu" ID="HyperLink6" runat="server" NavigateUrl="~/QuanLyDanhMucAdmin.aspx">
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink4" runat="server" NavigateUrl="~/QuanLySanPham.aspx">Quản Lý sản phẩm</asp:HyperLink>
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink5" runat="server" NavigateUrl="~/QuanLyDonHang.aspx">Quản Lý đơn hàng</asp:HyperLink>
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink6" runat="server" NavigateUrl="~/QuanLyTaiKhoan.aspx">
                         <i class="material-icons">people</i>
                         Quản Lý tài khỏan</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu" ID="HyperLink1" runat="server" NavigateUrl="~/QuanLyDanhMucAdmin.aspx">Quản Lý danh mục</asp:HyperLink>
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink1" runat="server" NavigateUrl="~/QuanLyTaiKhoanKhachHang.aspx">
+                        <i class="material-icons">people</i>
+                        Quản Lý tài khoản khách</asp:HyperLink>
                 </div>
             </div>
             <div class="page-content">

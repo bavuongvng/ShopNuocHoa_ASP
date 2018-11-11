@@ -1,0 +1,73 @@
+﻿body {
+}
+
+.danhmuc {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.product-item {
+    width: 250px;
+    height: 350px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    margin: 20px;
+    display: inline-block;
+    /*border: 1px solid #808080;*/
+    transition: .2s;
+    padding: 5px;
+}
+
+    .product-item:hover {
+        box-shadow: 5px 5px 10px #ccc;
+    }
+
+    .product-item .product-name {
+        width: 100%;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .product-item .product-price {
+        color: red;
+        font-weight: 900;
+        margin-top: 20px;
+    }
+
+.btn-action {
+    margin-top: 10px;
+}
+
+    .btn-action a {
+        color: white !important;
+        width: 30%;
+        margin: 0 5px;
+    }
+
+.tbl-chitiet {
+    margin-top: 20px;
+}
+
+    .tbl-chitiet img {
+        /*margin: 0 20px;*/
+    }
+
+    .tbl-chitiet b {
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+
+.product-description {
+    margin-top:20px;
+}
+.danh-muc{
+    margin-top:10px;
+}
+.danh-muc a {
+    background-color: orange;
+    color: white !important;
+    padding: 5px;
+    display:block;
+    border-bottom: 1px solid #fff;
+}
