@@ -59,15 +59,21 @@
     }
 
 .product-description {
-    margin-top:20px;
+    margin-top: 20px;
 }
-.danh-muc{
-    margin-top:10px;
-}
+
 .danh-muc a {
     background-color: orange;
     color: white !important;
-    padding: 5px;
-    display:block;
+    padding: 10px 7px;
+    display: block;
     border-bottom: 1px solid #fff;
 }
+
+    .danh-muc a:hover {
+        background-color: #ea6607;
+    }
+
+    .danh-muc a:focus {
+        background-color: #ea6607;
+    }
