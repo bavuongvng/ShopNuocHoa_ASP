@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container danhmuc">
         <div class="left-danhmuc">
-            <asp:SqlDataSource ID="sqlDsDanhMuc" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT * FROM [DanhMuc]"></asp:SqlDataSource>
+            <asp:sqldatasource id="sqlDsDanhMuc" runat="server" connectionstring="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" selectcommand="SELECT * FROM [DanhMuc]"></asp:sqldatasource>
             <br />
-            <asp:ListView ID="lvDsDanhMuc" runat="server" DataKeyNames="MaDanhMuc" DataSourceID="sqlDsDanhMuc">
+            <asp:listview id="lvDsDanhMuc" runat="server" datakeynames="MaDanhMuc" datasourceid="sqlDsDanhMuc">
                 <AlternatingItemTemplate>
                     <tr style="">
                         <td class="danh-muc">
@@ -80,16 +80,16 @@
                         </td>
                     </tr>
                 </SelectedItemTemplate>
-            </asp:ListView>
+            </asp:listview>
             <br />
         </div>
         <div class="right-sanpham">
-            <asp:SqlDataSource ID="sqlDsSanPham" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT [MaSanPham], [MaDanhMuc], [TenSanPham], [Gia], [Anh] FROM [SanPham] WHERE ([MaDanhMuc] = @MaDanhMuc)">
+            <asp:sqldatasource id="sqlDsSanPham" runat="server" connectionstring="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" selectcommand="SELECT [MaSanPham], [MaDanhMuc], [TenSanPham], [Gia], [Anh] FROM [SanPham] WHERE ([MaDanhMuc] = @MaDanhMuc)">
                 <SelectParameters>
                     <asp:QueryStringParameter Name="MaDanhMuc" QueryStringField="MaDanhMuc" Type="Int32" />
                 </SelectParameters>
-            </asp:SqlDataSource>
-            <asp:ListView ID="lvSanPham" runat="server" DataKeyNames="MaSanPham" DataSourceID="sqlDsSanPham" GroupItemCount="4">
+            </asp:sqldatasource>
+            <asp:listview id="lvSanPham" runat="server" datakeynames="MaSanPham" datasourceid="sqlDsSanPham" groupitemcount="4">
                 <AlternatingItemTemplate>
                     <td runat="server" style="" class="product-item">
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>
@@ -201,7 +201,7 @@
                         <asp:Label ID="AnhLabel" runat="server" Text='<%# Eval("Anh") %>' /><br />
                     </td>
                 </SelectedItemTemplate>
-            </asp:ListView>
+            </asp:listview>
         </div>
     </div>
 </asp:Content>
