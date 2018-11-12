@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="Chitietnuochoa.aspx.vb" Inherits="Chitietnuochoa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Chitietnuochoa.aspx.cs" Inherits="Chitietnuochoa" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container">
         <asp:SqlDataSource ID="sqlSanPham" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT * FROM [SanPham] WHERE ([MaSanPham] = @MaSanPham)">
             <SelectParameters>
@@ -94,8 +94,8 @@
             <ItemTemplate>
                 <table class="w-100">
                     <tr>
-                        <td rowspan="8">
-                            <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' Width="200px" />
+                        <td rowspan="8" style="border:1px solid #ccc; text-align:center; padding:5px 0"> 
+                            <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' Width="250px" />
                         </td>
                         <td><b>Tên sản phẩm:</b></td>
                         <td>

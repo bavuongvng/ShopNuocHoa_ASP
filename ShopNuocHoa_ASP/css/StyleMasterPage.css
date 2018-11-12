@@ -1,7 +1,7 @@
-﻿*{
+﻿* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
@@ -108,55 +108,16 @@ body {
         text-align: left;
     }
 
-    .menu-parent > li:hover .submenu {
-        display: flex !important;
-    }
-
     .menu-parent > li > a {
         font-size: 23px;
     }
+        .menu-parent > li > a:hover{
+            color:#f00 !important;
+        }
 
         .menu-parent > li > a > i {
             margin-top: 6px;
         }
-
-.submenu {
-    display: none !important;
-}
-
-    .submenu > li {
-        background-color: burlywood;
-        width: 100%;
-        border: .5px solid white;
-    }
-
-    .submenu a {
-        color: white !important;
-    }
-
-    .submenu > li:hover {
-        background-color: #188df3;
-    }
-
-    .submenu li:hover .subsubmenu {
-        display: flex !important;
-    }
-
-.subsubmenu {
-    top: 0;
-    right: -187px;
-    width: 100%;
-    display: none !important;
-}
-
-    .subsubmenu > li {
-        background-color: brown;
-    }
-
-        .subsubmenu > li:hover {
-            background-color: coral;
-        }
-
 
 /*Tranchu.aspx*/
 .silde-img {
@@ -244,3 +205,22 @@ footer {
             cursor: pointer;
             color: red !important;
         }
+
+.hoa-foot {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+    .hoa-foot img {
+        z-index: 1;
+    }
+
+    .hoa-foot > div {
+        height: 5px;
+        background-color: #ccc;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        box-shadow: 0 -2px 5px #ccc;
+    }

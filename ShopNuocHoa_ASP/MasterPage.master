@@ -28,7 +28,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <header style="background-color: antiquewhite;">
+            <header>
                 <div class="container">
                     <%--Top-Header (contain logo,search, and login)--%>
                     <div class="d-flex">
@@ -109,6 +109,10 @@
             </header>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <div class="hoa-foot">
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/Img/flower.png" />
+                <div></div>
+            </div>
             <footer>
                 <div class="footer container d-flex ">
                     <div>

@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPage.master" AutoEventWireup="false" CodeFile="DanhMucNuocHoa.aspx.vb" Inherits="DanhMucNuocHoa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DanhMucNuocHoa.aspx.cs" Inherits="DanhMucNuocHoa" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container danhmuc">
         <div class="left-danhmuc">
             <asp:sqldatasource id="sqlDsDanhMuc" runat="server" connectionstring="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" selectcommand="SELECT * FROM [DanhMuc]"></asp:sqldatasource>
@@ -11,10 +11,7 @@
                         <td class="danh-muc">
                             <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# Eval("MaDanhMuc", "~/DanhMucNuocHoa.aspx?MaDanhMuc={0}") %>'>
                                 <asp:Label ID="TenDanhMucLabel" runat="server" Text='<%# Eval("TenDanhMuc") %>' />
-                            </asp:HyperLink></td>
-                    </tr>
-                </AlternatingItemTemplate>
-                <EditItemTemplate>
+                            </asp:HyperLink></td></tr></AlternatingItemTemplate><EditItemTemplate>
                     <tr style="">
                         <td>
                             <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
@@ -31,18 +28,13 @@
                 <EmptyDataTemplate>
                     <table runat="server" style="">
                         <tr>
-                            <td>No data was returned.</td>
-                        </tr>
-                    </table>
-                </EmptyDataTemplate>
-                <InsertItemTemplate>
+                            <td>No data was returned.</td></tr></table></EmptyDataTemplate><InsertItemTemplate>
                     <tr style="">
                         <td>
                             <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
                         </td>
-                        <td>&nbsp;</td>
-                        <td>
+                        <td>&nbsp;</td><td>
                             <asp:TextBox ID="TenDanhMucTextBox" runat="server" Text='<%# Bind("TenDanhMuc") %>' />
                         </td>
                     </tr>
@@ -52,10 +44,7 @@
                         <td class="danh-muc">
                             <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl='<%# Eval("MaDanhMuc", "~/DanhMucNuocHoa.aspx?MaDanhMuc={0}") %>'>
                                 <asp:Label ID="Label1" runat="server" Text='<%# Eval("TenDanhMuc") %>' />
-                            </asp:HyperLink></td>
-                    </tr>
-                </ItemTemplate>
-                <LayoutTemplate>
+                            </asp:HyperLink></td></tr></ItemTemplate><LayoutTemplate>
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
@@ -105,20 +94,12 @@
                                 <asp:LinkButton ID="LinkButton2" CssClass="btn btn-sm btn-primary" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>Chi tiết</asp:LinkButton>
                                 <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm btn-success" runat="server" PostBackUrl="~/GioHang.aspx">Đặt mua</asp:LinkButton>
                             </p>
-                        </asp:HyperLink>
-                    </td>
-                </AlternatingItemTemplate>
-                <EditItemTemplate>
-                    <td runat="server" style="">MaSanPham:
-                        <asp:Label ID="MaSanPhamLabel1" runat="server" Text='<%# Eval("MaSanPham") %>' /><br />
-                        MaDanhMuc:
-                        <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' /><br />
-                        TenSanPham:
-                        <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' /><br />
-                        Gia:
-                        <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' /><br />
-                        Anh:
-                        <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' /><br />
+                        </asp:HyperLink></td></AlternatingItemTemplate><EditItemTemplate>
+                    <td runat="server" style="">MaSanPham: <asp:Label ID="MaSanPhamLabel1" runat="server" Text='<%# Eval("MaSanPham") %>' /><br />
+                        MaDanhMuc: <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' /><br />
+                        TenSanPham: <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' /><br />
+                        Gia: <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' /><br />
+                        Anh: <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' /><br />
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" /><br />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" /><br />
                     </td>
@@ -139,14 +120,10 @@
                     </tr>
                 </GroupTemplate>
                 <InsertItemTemplate>
-                    <td runat="server" style="">MaDanhMuc:
-                        <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' /><br />
-                        TenSanPham:
-                        <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' /><br />
-                        Gia:
-                        <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' /><br />
-                        Anh:
-                        <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' /><br />
+                    <td runat="server" style="">MaDanhMuc: <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' /><br />
+                        TenSanPham: <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' /><br />
+                        Gia: <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' /><br />
+                        Anh: <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' /><br />
                         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" /><br />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" /><br />
                     </td>
@@ -165,10 +142,7 @@
                                 <asp:LinkButton ID="LinkButton2" CssClass="btn btn-sm btn-primary" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>Chi tiết</asp:LinkButton>
                                 <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm btn-success" runat="server" PostBackUrl="~/GioHang.aspx">Đặt mua</asp:LinkButton>
                             </p>
-                        </asp:HyperLink>
-                    </td>
-                </ItemTemplate>
-                <LayoutTemplate>
+                        </asp:HyperLink></td></ItemTemplate><LayoutTemplate>
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
@@ -178,10 +152,10 @@
                             </td>
                         </tr>
                         <tr runat="server">
-                            <td runat="server" style="">
+                            <td runat="server" style="text-align:center !important;margin:10px 0; display:block;">
                                 <asp:DataPager ID="DataPager1" runat="server" PageSize="12">
                                     <Fields>
-                                        <asp:NextPreviousPagerField ButtonCssClass="btn btn-sm btn-secondary" ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
+                                        <asp:NextPreviousPagerField ButtonCssClass="btn btn-sm btn-primary" ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
                                     </Fields>
                                 </asp:DataPager>
                             </td>
@@ -189,16 +163,11 @@
                     </table>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
-                    <td runat="server" style="">MaSanPham:
-                        <asp:Label ID="MaSanPhamLabel" runat="server" Text='<%# Eval("MaSanPham") %>' /><br />
-                        MaDanhMuc:
-                        <asp:Label ID="MaDanhMucLabel" runat="server" Text='<%# Eval("MaDanhMuc") %>' /><br />
-                        TenSanPham:
-                        <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' /><br />
-                        Gia:
-                        <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' /><br />
-                        Anh:
-                        <asp:Label ID="AnhLabel" runat="server" Text='<%# Eval("Anh") %>' /><br />
+                    <td runat="server" style="">MaSanPham: <asp:Label ID="MaSanPhamLabel" runat="server" Text='<%# Eval("MaSanPham") %>' /><br />
+                        MaDanhMuc: <asp:Label ID="MaDanhMucLabel" runat="server" Text='<%# Eval("MaDanhMuc") %>' /><br />
+                        TenSanPham: <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' /><br />
+                        Gia: <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' /><br />
+                        Anh: <asp:Label ID="AnhLabel" runat="server" Text='<%# Eval("Anh") %>' /><br />
                     </td>
                 </SelectedItemTemplate>
             </asp:listview>

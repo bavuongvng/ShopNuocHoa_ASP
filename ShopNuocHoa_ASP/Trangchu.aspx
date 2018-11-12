@@ -119,7 +119,7 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="">
+                        <td runat="server"  style="text-align:center !important;margin:10px 0; display:block;">
                             <asp:DataPager ID="DataPager1" runat="server" PageSize="15">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonCssClass="btn btn-sm btn-primary" ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />

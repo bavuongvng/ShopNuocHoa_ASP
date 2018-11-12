@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" CodeFile="MasterPageAdmin.master.vb" Inherits="MasterPageAdmin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="MasterPageAdmin" %>
 
 <!DOCTYPE html>
 
