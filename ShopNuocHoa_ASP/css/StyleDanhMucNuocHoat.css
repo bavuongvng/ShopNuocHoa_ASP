@@ -80,3 +80,14 @@
     .danh-muc a:focus {
         background-color: #ea6607;
     }
+.product-detail div{
+    padding-left:20px;
+    margin-bottom:5px;
+}
+    .product-detail div b{
+        display:inline-block;
+        width:145px;
+    }
+    .product-detail div a {
+        color: white !important;
+    }

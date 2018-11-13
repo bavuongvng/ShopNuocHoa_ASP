@@ -18,6 +18,9 @@
                 <div class="carousel-item  align-content-center">
                     <asp:Image ID="Image2" runat="server" ImageUrl="~/Img/banner2.jpg" />
                 </div>
+                <div class="carousel-item  align-content-center">
+                    <asp:Image ID="Image4" runat="server" ImageUrl="~/Img/banner3.jpg" />
+                </div>
             </div>
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#demo" data-slide="prev">

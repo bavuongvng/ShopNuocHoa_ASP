@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
-        <h2>Trang đăng nhập</h2>
+
     </div>
 </asp:Content>
 

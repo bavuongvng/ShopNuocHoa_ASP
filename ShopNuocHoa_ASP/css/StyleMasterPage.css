@@ -46,6 +46,14 @@ body {
     background-color: blueviolet;
 }
 
+header {
+    box-shadow: 0 5px 5px #ccc;
+    /*position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;*/
+}
+
 .logo {
     width: 25%;
     overflow: hidden;
@@ -101,6 +109,7 @@ body {
 
 .menu-parent {
     z-index: 1;
+    position: fixed;
 }
 
     .menu-parent li {
