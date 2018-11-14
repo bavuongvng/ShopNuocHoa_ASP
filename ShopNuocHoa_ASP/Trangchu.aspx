@@ -108,7 +108,7 @@
                         <p class="btn-action">
                             <asp:LinkButton ID="LinkButton2" CssClass="btn btn-sm btn-primary" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>Chi
           tiết</asp:LinkButton>
-                            <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm btn-success" runat="server" PostBackUrl="~/GioHang.aspx">Đặt
+                            <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm btn-success" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/GioHang.aspx?MaSanPham={0}") %>'>Đặt
           mua</asp:LinkButton>
                         </p>
                     </asp:HyperLink></td></ItemTemplate><LayoutTemplate>
