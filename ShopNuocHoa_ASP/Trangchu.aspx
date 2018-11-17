@@ -5,6 +5,7 @@
     <div class="content">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
+            <!-- Indicators -->
             <ul class="carousel-indicators">
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
                 <li data-target="#demo" data-slide-to="1"></li>
@@ -35,44 +36,44 @@
         <asp:SqlDataSource ID="sqlDsNuocHoa" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT [MaSanPham], [MaDanhMuc], [TenSanPham], [Gia], [Anh] FROM [SanPham]"></asp:SqlDataSource>
         <asp:ListView ID="ListView1" runat="server" DataKeyNames="MaSanPham" DataSourceID="sqlDsNuocHoa" GroupItemCount="5">
             <AlternatingItemTemplate>
-                <td runat="server" style="" class="product-item">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>
-                        <p class="product-name">
-                            <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' />
-                        </p>
-                        <asp:Image ID="Image3" runat="server" Height="100px" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' />
-                        <p class="product-price">
-                            <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' />
-                            đ
-                        </p>
-                        <p class="btn-action">
-                            <asp:LinkButton ID="LinkButton2" CssClass="btn btn-sm btn-primary" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>Chi
-          tiết</asp:LinkButton>
-                            <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm btn-success" runat="server" PostBackUrl="~/GioHang.aspx">Đặt
-          mua</asp:LinkButton>
-                        </p>
-                    </asp:HyperLink></td></AlternatingItemTemplate><EditItemTemplate>
-                <td runat="server" style="">MaSanPham: <asp:Label ID="MaSanPhamLabel1" runat="server" Text='<%# Eval("MaSanPham") %>' />
+                <td runat="server" class="product-item">
+                    <asp:Label ID="TenSanPhamLabel" runat="server" CssClass="product-name" Text='<%# Eval("TenSanPham") %>'></asp:Label>
                     <br />
-                    MaDanhMuc: <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' />
+                    <asp:Image ID="Image5" runat="server" Height="100px" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' />
                     <br />
-                    TenSanPham: <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' />
+                    <asp:Label ID="GiaLabel" runat="server" CssClass="product-price" Text='<%# Eval("Gia") %>'></asp:Label>
                     <br />
-                    Gia: <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-success btn-sm btn-action" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>' Width="40%">Chi tiết</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary btn-sm btn-action" PostBackUrl="~/GioHang.aspx" Width="40%">Đặt mua</asp:LinkButton>
                     <br />
-                    Anh: <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' />
+                </td>
+            </AlternatingItemTemplate>
+            <EditItemTemplate>
+                <td runat="server" style="">MaSanPham:
+                    <asp:Label ID="MaSanPhamLabel1" runat="server" Text='<%# Eval("MaSanPham") %>' />
+                    <br />MaDanhMuc:
+                    <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' />
+                    <br />TenSanPham:
+                    <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' />
+                    <br />Gia:
+                    <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
+                    <br />Anh:
+                    <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' />
                     <br />
                     <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                     <br />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                    <br />
-                </td>
+                    <br /></td>
             </EditItemTemplate>
             <EmptyDataTemplate>
                 <table runat="server" style="">
                     <tr>
-                        <td>No data was returned.</td></tr></table></EmptyDataTemplate><EmptyItemTemplate>
-                <td runat="server" />
+                        <td>No data was returned.</td>
+                    </tr>
+                </table>
+            </EmptyDataTemplate>
+            <EmptyItemTemplate>
+<td runat="server" />
             </EmptyItemTemplate>
             <GroupTemplate>
                 <tr id="itemPlaceholderContainer" runat="server">
@@ -80,38 +81,33 @@
                 </tr>
             </GroupTemplate>
             <InsertItemTemplate>
-                <td runat="server" style="">MaDanhMuc: <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' />
-                    <br />
-                    TenSanPham: <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' />
-                    <br />
-                    Gia: <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
-                    <br />
-                    Anh: <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' />
+                <td runat="server" style="">MaDanhMuc:
+                    <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' />
+                    <br />TenSanPham:
+                    <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' />
+                    <br />Gia:
+                    <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
+                    <br />Anh:
+                    <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' />
                     <br />
                     <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                     <br />
                     <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                    <br />
-                </td>
+                    <br /></td>
             </InsertItemTemplate>
             <ItemTemplate>
-                <td runat="server" style="" class="product-item">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>
-                        <p class="product-name">
-                            <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' />
-                        </p>
-                        <asp:Image ID="Image3" runat="server" Height="100px" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' />
-                        <p class="product-price">
-                            <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' />
-                            đ
-                        </p>
-                        <p class="btn-action">
-                            <asp:LinkButton ID="LinkButton2" CssClass="btn btn-sm btn-primary" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>'>Chi
-          tiết</asp:LinkButton>
-                            <asp:LinkButton ID="LinkButton1" CssClass="btn btn-sm btn-success" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/GioHang.aspx?MaSanPham={0}") %>'>Đặt
-          mua</asp:LinkButton>
-                        </p>
-                    </asp:HyperLink></td></ItemTemplate><LayoutTemplate>
+                <td runat="server" class="product-item">
+                    <asp:Label ID="TenSanPhamLabel" runat="server" CssClass="product-name" Text='<%# Eval("TenSanPham") %>'></asp:Label>
+                    <br />
+                    <asp:Image ID="Image5" runat="server" Height="100px" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' />
+                    <br />
+                    <asp:Label ID="GiaLabel" runat="server" CssClass="product-price" Text='<%# Eval("Gia") %>'></asp:Label>
+                    <br />
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-success btn-sm btn-action" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>' Width="40%">Chi tiết</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary btn-sm btn-action" PostBackUrl="~/GioHang.aspx" Width="40%">Đặt mua</asp:LinkButton>
+                </td>
+            </ItemTemplate>
+            <LayoutTemplate>
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
@@ -122,7 +118,7 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server"  style="text-align:center !important;margin:10px 0; display:block;">
+                        <td runat="server">
                             <asp:DataPager ID="DataPager1" runat="server" PageSize="15">
                                 <Fields>
                                     <asp:NextPreviousPagerField ButtonCssClass="btn btn-sm btn-primary" ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
@@ -133,17 +129,17 @@
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <td runat="server" style="">MaSanPham: <asp:Label ID="MaSanPhamLabel" runat="server" Text='<%# Eval("MaSanPham") %>' />
-                    <br />
-                    MaDanhMuc: <asp:Label ID="MaDanhMucLabel" runat="server" Text='<%# Eval("MaDanhMuc") %>' />
-                    <br />
-                    TenSanPham: <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' />
-                    <br />
-                    Gia: <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' />
-                    <br />
-                    Anh: <asp:Label ID="AnhLabel" runat="server" Text='<%# Eval("Anh") %>' />
-                    <br />
-                </td>
+                <td runat="server" style="">MaSanPham:
+                    <asp:Label ID="MaSanPhamLabel" runat="server" Text='<%# Eval("MaSanPham") %>' />
+                    <br />MaDanhMuc:
+                    <asp:Label ID="MaDanhMucLabel" runat="server" Text='<%# Eval("MaDanhMuc") %>' />
+                    <br />TenSanPham:
+                    <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' />
+                    <br />Gia:
+                    <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' />
+                    <br />Anh:
+                    <asp:Label ID="AnhLabel" runat="server" Text='<%# Eval("Anh") %>' />
+                    <br /></td>
             </SelectedItemTemplate>
         </asp:ListView>
         <br />
