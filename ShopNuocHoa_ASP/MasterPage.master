@@ -7,6 +7,8 @@
     <title></title>
     <link href="css/StyleMasterPage.css" rel="stylesheet" />
     <link href="css/StyleDanhMucNuocHoat.css" rel="stylesheet" />
+    <link href="css/StyleLogin.css" rel="stylesheet" />
+
     <%--bootstrap--%>
     <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- jQuery library -->

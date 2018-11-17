@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Chitietnuochoa.aspx.cs" Inherits="Chitietnuochoa" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
         <asp:SqlDataSource ID="sqlSanPham" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT * FROM [SanPham] WHERE ([MaSanPham] = @MaSanPham)">
             <SelectParameters>
@@ -92,58 +92,26 @@
                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </InsertItemTemplate>
             <ItemTemplate>
+                <h3 style="margin-bottom: 15px; color: #9b0e62;">
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("TenSanPham") %>' />
+                </h3>
                 <table class="w-100">
                     <tr>
-                        <td rowspan="8" style="border:1px solid #ccc; text-align:center; padding:5px 0"> 
+                        <td style="border: 1px solid #ccc; text-align: center; padding: 5px 0;">
                             <asp:Image ID="Image2" runat="server" ImageUrl='<%# Eval("Anh", "~/Img/imgProducts/{0}") %>' Width="250px" />
                         </td>
-                        <td><b>Tên sản phẩm:</b></td>
-                        <td>
-                            <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Bind("TenSanPham") %>' />
+                        <td class="product-detail">
+                            <div><b>Giá</b>: <asp:Label ID="Label2" runat="server" Text='<%# Bind("Gia") %>' /></div>
+                            <div><b>Nồng độ</b>: <asp:Label ID="NongDoLabel" runat="server" Text='<%# Bind("NongDo") %>' /></div>
+                            <div><b>Xuất sứ</b>: <asp:Label ID="XuatSuLabel" runat="server" Text='<%# Bind("XuatSu") %>' /></div>
+                            <div><b>Năm phát hành</b>: <asp:Label ID="NamPhatHanhLabel" runat="server" Text='<%# Bind("NamPhatHanh") %>' /></div>
+                            <div><b>Nhóm hương</b>: <asp:Label ID="NhomHuongLabel" runat="server" Text='<%# Bind("NhomHuong") %>' /></div>
+                            <div><b>Phong cách</b>: <asp:Label ID="PhongCachLabel" runat="server" Text='<%# Bind("PhongCach") %>' /></div>
+                            <div><b>Dung tích</b>: <asp:Label ID="DungTichLabel" runat="server" Text='<%# Bind("DungTich") %>' /></div>
+                            <div style="margin-top: 20px; display: inline-block; color: white;">
+                                <asp:LinkButton ID="LinkButton1" PostBackUrl='<%# Eval("MaSanPham", "~/GioHang.aspx?MaSanPham={0}") %>'  CssClass="btn btn-danger" runat="server">Mua ngay</asp:LinkButton>
+                            </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <td><b>Giá:</b></td>
-                        <td>
-                            <asp:Label ID="GiaLabel" runat="server" Text='<%# Bind("Gia") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Nồng độ:</b></td>
-                        <td>
-                            <asp:Label ID="NongDoLabel" runat="server" Text='<%# Bind("NongDo") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Xuất sứ:</b></td>
-                        <td>
-                            <asp:Label ID="XuatSuLabel" runat="server" Text='<%# Bind("XuatSu") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Năm phát hành:</b></td>
-                        <td>
-                            <asp:Label ID="NamPhatHanhLabel" runat="server" Text='<%# Bind("NamPhatHanh") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Nhóm hương:</b></td>
-                        <td>
-                            <asp:Label ID="NhomHuongLabel" runat="server" Text='<%# Bind("NhomHuong") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Phong cách:</b></td>
-                        <td>
-                            <asp:Label ID="PhongCachLabel" runat="server" Text='<%# Bind("PhongCach") %>' />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><b>Dung tích:</b></td>
-                        <td>
-                            <asp:Label ID="DungTichLabel" runat="server" Text='<%# Bind("DungTich") %>' />
-                        </td>
-                    </tr>
                 </table>
                 <div class="product-description">
                     <asp:Label ID="MoTaLabel" runat="server" Text='<%# Bind("MoTa", "{0}") %>' />
