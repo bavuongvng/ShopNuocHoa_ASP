@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
-public partial class DangNhap :  System.Web.UI.Page
+public partial class DangNhap : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -14,6 +15,20 @@ public partial class DangNhap :  System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        Response.Redirect("DanhMucNuocHoa.aspx");
+        DataView dv = (DataView)sqlDsAccount.Select(DataSourceSelectArguments.Empty);
+        int num = dv.Count;
+        if(num > 0)
+        {
+            Account account = new Account();
+            account.Username = txtUername.Text;
+            account.Password = txtPassword.Text;
+
+            Session.Add("Account", account);
+            Response.Redirect("Trangchu.aspx");
+        }
+        else
+        {
+            Response.Redirect("DangNhap.aspx");
+        }
     }
 }

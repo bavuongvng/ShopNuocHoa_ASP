@@ -95,7 +95,7 @@
                     </td>
                 </ItemTemplate>
                 <LayoutTemplate>
-                    <table runat="server" style="text-align: center;">
+                    <table runat="server">
                         <tr runat="server">
                             <td runat="server">
                                 <table id="groupPlaceholderContainer" runat="server" border="0" style="">
