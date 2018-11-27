@@ -43,7 +43,7 @@
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink5" runat="server" NavigateUrl="~/QuanLyDonHang.aspx">Quản Lý đơn hàng</asp:HyperLink>
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink6" runat="server" NavigateUrl="~/QuanLyTaiKhoan.aspx">
                         <i class="material-icons">people</i>
-                        Quản Lý tài khỏan</asp:HyperLink>
+                        Quản Lý tài khoản</asp:HyperLink>
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink1" runat="server" NavigateUrl="~/QuanLyTaiKhoanKhachHang.aspx">
                         <i class="material-icons">people</i>
                         Quản Lý tài khoản khách</asp:HyperLink>
