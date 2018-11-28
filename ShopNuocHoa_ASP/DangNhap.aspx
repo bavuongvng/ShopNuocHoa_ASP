@@ -10,10 +10,12 @@
                     <asp:Label ID="Label2" runat="server" Text="Tên tài khoản"></asp:Label>
                     <br />
                     <asp:TextBox ID="txtUername" runat="server" CssClass="form-control  mt-1"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUername" ErrorMessage="Bạn phải nhập username" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
                     <asp:Label ID="Label3" runat="server" Text="Mật khẩu"></asp:Label>
                     <br />
                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control mt-1" TextMode="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Bạn phải nhập password" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
                     <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-primary mt-2" OnClick="btnLogin_Click" Text="Đăng nhập" />
                 </asp:Panel>
