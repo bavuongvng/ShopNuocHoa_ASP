@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 
-public partial class DangNhap : System.Web.UI.Page
+public partial class DangNhapAdmin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -15,20 +15,20 @@ public partial class DangNhap : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        DataView dv = (DataView)sqlDsAccount.Select(DataSourceSelectArguments.Empty);
+        DataView dv = (DataView)sqlTaiKhoan.Select(DataSourceSelectArguments.Empty);
         int num = dv.Count;
-        if(num > 0)
+        if (num > 0)
         {
             Account account = new Account();
             account.Username = txtUername.Text;
             account.Password = txtPassword.Text;
 
-            Session.Add("user", account);
-            Response.Redirect("Trangchu.aspx");
+            Session.Add("userAdmin", account);
+            Response.Redirect("TrangchuAdmin.aspx");
         }
         else
         {
-            Response.Redirect("DangNhap.aspx");
+            Response.Redirect("DangNhapAdmin.aspx");
         }
     }
 }

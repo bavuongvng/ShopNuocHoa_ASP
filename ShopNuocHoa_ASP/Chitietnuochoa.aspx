@@ -119,7 +119,6 @@
                 <br />
             </ItemTemplate>
         </asp:FormView>
-        <br />
     </div>
 </asp:Content>
 
