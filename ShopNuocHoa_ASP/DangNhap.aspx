@@ -2,8 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-    <div _designerregion="0">
-        <asp:Panel ID="Panel1" runat="server" CssClass="w-100 d-flex justify-content-center">
+    <asp:Panel ID="Panel1" runat="server" CssClass="w-100 d-flex justify-content-center">
             <asp:Panel ID="Panel2" runat="server" CssClass="w-50 text-center mt-5 mb-5">
                 <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Đăng nhập hệ thống"></asp:Label>
                 <br />
@@ -27,7 +26,6 @@
                 <br />
             </asp:Panel>
         </asp:Panel>
-    </div>
-
+    
 </asp:Content>
 

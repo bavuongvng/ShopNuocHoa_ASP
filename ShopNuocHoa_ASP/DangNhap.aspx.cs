@@ -23,7 +23,7 @@ public partial class DangNhap : System.Web.UI.Page
             account.Username = txtUername.Text;
             account.Password = txtPassword.Text;
 
-            Session.Add("Account", account);
+            Session.Add("user", account);
             Response.Redirect("Trangchu.aspx");
         }
         else
