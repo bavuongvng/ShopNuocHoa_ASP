@@ -65,6 +65,7 @@
                         <%--End Search--%>
                         <div class="login">
                             <div>
+                                <asp:Label ID="lblThongTin" runat="server"></asp:Label>
                                 <asp:HyperLink ID="HyperDN" runat="server" NavigateUrl="~/DangNhap.aspx">Đăng nhập</asp:HyperLink>
                                 <asp:HyperLink ID="HyperDK" runat="server" NavigateUrl="~/DangKy.aspx">Đăng ký</asp:HyperLink>
                                 <asp:LinkButton ID="HyperDX" runat="server" OnClick="HyperDX_Click">Đăng xuất</asp:LinkButton>

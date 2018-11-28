@@ -13,11 +13,14 @@ public partial class MasterPageAdmin : System.Web.UI.MasterPage
         {
             btnDangNhap.Visible = true;
             btnDangXuat.Visible = false;
+            lblThongTin.Visible = false;
         }
         else
         {
+            lblThongTin.Text = "Xin chào " + Session["tenAdmin"];
             btnDangXuat.Visible = true;
             btnDangNhap.Visible = false;
+            lblThongTin.Visible = true;
         }
     }
 

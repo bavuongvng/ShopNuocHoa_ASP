@@ -52,6 +52,7 @@
             <div class="page-content">
                 <asp:LinkButton ID="btnDangNhap" runat="server" CssClass="float-right mr-5 mt-2" PostBackUrl="~/DangNhapAdmin.aspx">Đăng nhập</asp:LinkButton>
                 <asp:LinkButton ID="btnDangXuat" runat="server" CssClass="float-right mr-5 mt-2" OnClick="btnDangXuat_Click">Đăng xuất</asp:LinkButton>
+                <asp:Label ID="lblThongTin" runat="server" CssClass="float-right mr-5 mt-2" Font-Bold="True" Font-Size="Large"></asp:Label>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

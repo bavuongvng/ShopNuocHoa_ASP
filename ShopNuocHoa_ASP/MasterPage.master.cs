@@ -14,12 +14,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
             HyperDK.Visible = true;
             HyperDN.Visible = true;
             HyperDX.Visible = false;
+            lblThongTin.Visible = false;
         }
         else
         {
+            lblThongTin.Text = "Xin chào " + Session["tenUser"];
             HyperDX.Visible = true;
             HyperDK.Visible = false;
             HyperDN.Visible = false;
+            lblThongTin.Visible = true;
         }
     }
 

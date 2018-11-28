@@ -23,6 +23,11 @@ public partial class DangNhap : System.Web.UI.Page
             account.Username = txtUername.Text;
             account.Password = txtPassword.Text;
 
+            DataTable tb = dv.ToTable();
+            DataRow row = tb.Rows[0];
+            string name = (string)row[2];
+
+            Session.Add("tenUser", name);
             Session.Add("user", account);
             Response.Redirect("Trangchu.aspx");
         }

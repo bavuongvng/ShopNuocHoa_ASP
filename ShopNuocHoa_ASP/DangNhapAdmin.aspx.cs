@@ -17,12 +17,17 @@ public partial class DangNhapAdmin : System.Web.UI.Page
     {
         DataView dv = (DataView)sqlTaiKhoan.Select(DataSourceSelectArguments.Empty);
         int num = dv.Count;
+        
         if (num > 0)
         {
+            DataTable tb = dv.ToTable();
+            DataRow row = tb.Rows[0];
+            string name = (string)row[2];
+            Session.Add("tenAdmin", name);
+
             Account account = new Account();
             account.Username = txtUername.Text;
             account.Password = txtPassword.Text;
-
             Session.Add("userAdmin", account);
             Response.Redirect("TrangchuAdmin.aspx");
         }
