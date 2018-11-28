@@ -36,7 +36,7 @@
                         <asp:Image ID="Image1" runat="server" ImageUrl="~/Img/Logo.png" Width="100%" />
                     </asp:HyperLink>
                     <hr style="background-color: white" />
-                    <asp:HyperLink CssClass="items-menu menu-active" ID="HyperLink3" runat="server" NavigateUrl="~/QuanLyDanhMuc.aspx">
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink3" runat="server" NavigateUrl="~/QuanLyDanhMuc.aspx">
                         <i class="material-icons">dashboard</i>
                         Quản Lý danh mục</asp:HyperLink>
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink4" runat="server" NavigateUrl="~/QuanLySanPham.aspx">Quản Lý sản phẩm</asp:HyperLink>
@@ -50,6 +50,8 @@
                 </div>
             </div>
             <div class="page-content">
+                <asp:LinkButton ID="btnDangNhap" runat="server" CssClass="float-right mr-5 mt-2" PostBackUrl="~/DangNhapAdmin.aspx">Đăng nhập</asp:LinkButton>
+                <asp:LinkButton ID="btnDangXuat" runat="server" CssClass="float-right mr-5 mt-2" OnClick="btnDangXuat_Click">Đăng xuất</asp:LinkButton>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
