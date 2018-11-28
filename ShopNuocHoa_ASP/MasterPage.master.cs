@@ -27,8 +27,5 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         Session.Remove("user");
         Response.Redirect("Trangchu.aspx");
-        HyperDK.Visible = true;
-        HyperDN.Visible = true;
-        HyperDX.Visible = false;
     }
 }
