@@ -10,13 +10,13 @@ public partial class GioHang : System.Web.UI.Page
     ShoppingCart aCart;
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-        if (gvGioHang.Rows.Count<0)
+
+        if (gvGioHang.Rows.Count < 0)
         {
             return;
         }
 
-        if(gvSP.Rows.Count <=0)
+        if (gvSP.Rows.Count <= 0)
         {
             return;
         }

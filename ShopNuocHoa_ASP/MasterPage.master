@@ -70,6 +70,7 @@
                                 <asp:HyperLink ID="HyperDK" runat="server" NavigateUrl="~/DangKy.aspx">Đăng ký</asp:HyperLink>
                                 <asp:LinkButton ID="HyperDX" runat="server" OnClick="HyperDX_Click">Đăng xuất</asp:LinkButton>
                             </div>
+
                             <asp:HyperLink CssClass="position-relative" ID="giohang" runat="server" NavigateUrl="~/GioHang.aspx">
                             <i class="material-icons" style="font-size:40px;">shopping_cart</i>
                                 <span class="badge badge-danger position-absolute">10</span>

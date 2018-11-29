@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-/// <summary>
-/// Summary description for Account
-/// </summary>
 public class Account
 {
     private string username;
@@ -22,10 +19,11 @@ public class Account
         set { password = value; }
     }
 
+    public string HoTen { get; set; }
+    public string SoDT { get; set; }
+    public string DiaChi { get; set; }
+
     public Account()
     {
-        //
-        // TODO: Add constructor logic here
-        //
     }
 }
