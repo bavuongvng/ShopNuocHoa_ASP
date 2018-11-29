@@ -19,7 +19,7 @@ public partial class DangKy : System.Web.UI.Page
         sqlTaiKhoan.InsertParameters["HoTen"].DefaultValue = txtHoTen.Text;
         sqlTaiKhoan.InsertParameters["DiaChi"].DefaultValue = txtDiaChi.Text;
         sqlTaiKhoan.InsertParameters["SoDT"].DefaultValue = txtSoDT.Text;
-        sqlTaiKhoan.InsertParameters["admin"].DefaultValue = "1";
+        sqlTaiKhoan.InsertParameters["admin"].DefaultValue = "0";
         sqlTaiKhoan.InsertParameters["tinhTrang"].DefaultValue = "1";
         try
         {
