@@ -14,15 +14,15 @@
             <asp:BoundField DataField="HoTen" HeaderText="Họ tên" SortExpression="HoTen" />
             <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ" SortExpression="DiaChi" />
             <asp:BoundField DataField="SoDT" HeaderText="Số điện thoại" SortExpression="SoDT" />
-            <asp:CheckBoxField DataField="admin" HeaderText="Admin" SortExpression="admin" />
-            <asp:CheckBoxField DataField="tinhtrang" HeaderText="Tình trạng" SortExpression="tinhtrang" />
+            <asp:BoundField DataField="admin" HeaderText="Admin" SortExpression="admin" />
+            <asp:BoundField DataField="tinhTrang" HeaderText="Tình trạng" SortExpression="tinhTrang" />
             <asp:CommandField ButtonType="Button" CancelText="Huỷ bỏ" DeleteText="Xoá" EditText="Sửa" InsertText="Thêm" NewText="Thêm mới" SelectText="Chọn" ShowDeleteButton="True" ShowEditButton="True" UpdateText="Cập nhật" />
         </Columns>
     </asp:GridView>
             </td>
         </tr>
     </table>
-    <asp:SqlDataSource ID="SqlDataSource_dstaikhoan" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" DeleteCommand="DELETE FROM [TaiKhoan] WHERE [TenDangNhap] = @TenDangNhap" InsertCommand="INSERT INTO [TaiKhoan] ([TenDangNhap], [MatKhau], [HoTen], [DiaChi], [SoDT], [admin], [tinhtrang]) VALUES (@TenDangNhap, @MatKhau, @HoTen, @DiaChi, @SoDT, @admin, @tinhtrang)" SelectCommand="SELECT * FROM [TaiKhoan]" UpdateCommand="UPDATE [TaiKhoan] SET [MatKhau] = @MatKhau, [HoTen] = @HoTen, [DiaChi] = @DiaChi, [SoDT] = @SoDT, [admin] = @admin, [tinhtrang] = @tinhtrang WHERE [TenDangNhap] = @TenDangNhap">
+    <asp:SqlDataSource ID="SqlDataSource_dstaikhoan" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" DeleteCommand="DELETE FROM [TaiKhoan] WHERE [TenDangNhap] = @TenDangNhap" InsertCommand="INSERT INTO [TaiKhoan] ([TenDangNhap], [MatKhau], [HoTen], [DiaChi], [SoDT], [admin], [tinhTrang]) VALUES (@TenDangNhap, @MatKhau, @HoTen, @DiaChi, @SoDT, @admin, @tinhTrang)" SelectCommand="SELECT * FROM [TaiKhoan]" UpdateCommand="UPDATE [TaiKhoan] SET [MatKhau] = @MatKhau, [HoTen] = @HoTen, [DiaChi] = @DiaChi, [SoDT] = @SoDT, [admin] = @admin, [tinhTrang] = @tinhTrang WHERE [TenDangNhap] = @TenDangNhap" ProviderName="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString.ProviderName %>">
         <DeleteParameters>
             <asp:Parameter Name="TenDangNhap" Type="String" />
         </DeleteParameters>
@@ -31,17 +31,17 @@
             <asp:Parameter Name="MatKhau" Type="String" />
             <asp:Parameter Name="HoTen" Type="String" />
             <asp:Parameter Name="DiaChi" Type="String" />
-            <asp:Parameter Name="SoDT" Type="Int32" />
-            <asp:Parameter Name="admin" Type="Boolean" />
-            <asp:Parameter Name="tinhtrang" Type="Boolean" />
+            <asp:Parameter Name="SoDT" Type="String" />
+            <asp:Parameter Name="admin" Type="Int32" />
+            <asp:Parameter Name="tinhtrang" Type="Int32" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="MatKhau" Type="String" />
             <asp:Parameter Name="HoTen" Type="String" />
             <asp:Parameter Name="DiaChi" Type="String" />
-            <asp:Parameter Name="SoDT" Type="Int32" />
-            <asp:Parameter Name="admin" Type="Boolean" />
-            <asp:Parameter Name="tinhtrang" Type="Boolean" />
+            <asp:Parameter Name="SoDT" Type="String" />
+            <asp:Parameter Name="admin" Type="Int32" />
+            <asp:Parameter Name="tinhtrang" Type="Int32" />
             <asp:Parameter Name="TenDangNhap" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>

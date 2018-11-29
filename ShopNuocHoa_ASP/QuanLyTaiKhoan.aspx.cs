@@ -31,20 +31,20 @@ public partial class QuanLyTaiKhoan :  System.Web.UI.Page
         SqlDataSource_dstaikhoan.InsertParameters["SoDT"].DefaultValue = TextBox_sodt.Text;
         if (CheckBox_admin.Checked)
         {
-            SqlDataSource_dstaikhoan.InsertParameters["admin"].DefaultValue = true.ToString();
+            SqlDataSource_dstaikhoan.InsertParameters["admin"].DefaultValue = "1";
         }
         else
         {
-            SqlDataSource_dstaikhoan.InsertParameters["admin"].DefaultValue = false.ToString();
+            SqlDataSource_dstaikhoan.InsertParameters["admin"].DefaultValue = "0";
         }
 
         if (CheckBox_tinhtrang.Checked)
         {
-            SqlDataSource_dstaikhoan.InsertParameters["tinhtrang"].DefaultValue = true.ToString();
+            SqlDataSource_dstaikhoan.InsertParameters["tinhtrang"].DefaultValue = "1";
         }
         else
         {
-            SqlDataSource_dstaikhoan.InsertParameters["tinhtrang"].DefaultValue = false.ToString();
+            SqlDataSource_dstaikhoan.InsertParameters["tinhtrang"].DefaultValue = "0";
         }
 
         try

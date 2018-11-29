@@ -31,8 +31,8 @@ public partial class QuanLyTaiKhoanKhachHang :  System.Web.UI.Page
         SqlDataSource_dskhachhang.InsertParameters["HoTen"].DefaultValue = TextBox_hoten.Text;
         SqlDataSource_dskhachhang.InsertParameters["DiaChi"].DefaultValue = TextBox_diachi.Text;
         SqlDataSource_dskhachhang.InsertParameters["SoDT"].DefaultValue = TextBox_sodt.Text;
-        SqlDataSource_dskhachhang.InsertParameters["admin"].DefaultValue = false.ToString();
-        SqlDataSource_dskhachhang.InsertParameters["tinhtrang"].DefaultValue = true.ToString();
+        SqlDataSource_dskhachhang.InsertParameters["admin"].DefaultValue = "0";
+        SqlDataSource_dskhachhang.InsertParameters["tinhtrang"].DefaultValue = "1";
         try
         {
             SqlDataSource_dskhachhang.Insert();
@@ -64,7 +64,7 @@ public partial class QuanLyTaiKhoanKhachHang :  System.Web.UI.Page
     protected void GridView_dskhachhang_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         Label_error.Text = "";
-        SqlDataSource_dskhachhang.UpdateParameters["admin"].DefaultValue = false.ToString();
+        SqlDataSource_dskhachhang.UpdateParameters["admin"].DefaultValue = "0";
         RequiredFieldValidator_tendn.Enabled = true;
         RequiredFieldValidator_matkhau.Enabled = true;
         RequiredFieldValidator_hoten.Enabled = true;
