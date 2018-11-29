@@ -11,4 +11,34 @@ public partial class DangKy : System.Web.UI.Page
     {
 
     }
+
+    protected void btnDangKy_Click(object sender, EventArgs e)
+    {
+        sqlTaiKhoan.InsertParameters["TenDangNhap"].DefaultValue = txtUername.Text;
+        sqlTaiKhoan.InsertParameters["MatKhau"].DefaultValue = txtPassword.Text;
+        sqlTaiKhoan.InsertParameters["HoTen"].DefaultValue = txtHoTen.Text;
+        sqlTaiKhoan.InsertParameters["DiaChi"].DefaultValue = txtDiaChi.Text;
+        sqlTaiKhoan.InsertParameters["SoDT"].DefaultValue = txtSoDT.Text;
+        sqlTaiKhoan.InsertParameters["admin"].DefaultValue = "1";
+        sqlTaiKhoan.InsertParameters["tinhTrang"].DefaultValue = "1";
+        try
+        {
+            sqlTaiKhoan.Insert();
+
+            Account account = new Account();
+            account.Username = txtUername.Text;
+            account.Password = txtPassword.Text;
+
+            Session.Add("tenUser", txtHoTen.Text);
+            Session.Add("user", account);
+            Response.Redirect("Trangchu.aspx");
+
+            lbThongBao.Text = "";
+
+        }
+        catch (Exception ex)
+        {
+            lbThongBao.Text = "Loi " + ex.Message;
+        }
+    }
 }
