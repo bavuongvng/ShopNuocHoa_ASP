@@ -1,12 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Chitietnuochoa.aspx.cs" Inherits="Chitietnuochoa" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ChiTiet.aspx.cs" Inherits="ChiTiet" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="container">
-        <asp:SqlDataSource ID="sqlSanPham" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT * FROM [SanPham] WHERE ([MaSanPham] = @MaSanPham)">
-            <SelectParameters>
-                <asp:QueryStringParameter Name="MaSanPham" QueryStringField="MaSanPham" Type="Int32" />
-            </SelectParameters>
-        </asp:SqlDataSource>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:SqlDataSource ID="sqlSanPham" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" SelectCommand="SELECT * FROM [SanPham] WHERE ([MaSanPham] = @MaSanPham)">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="MaSanPham" QueryStringField="MaSanPham" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
     <asp:FormView ID="frViewSanPham"  runat="server" DataKeyNames="MaSanPham" DataSourceID="sqlSanPham" CssClass="container">
         <EditItemTemplate>
             MaSanPham:
@@ -53,46 +52,46 @@
         </EditItemTemplate>
         <InsertItemTemplate>
             MaThuongHieu:
-            <asp:TextBox ID="MaThuongHieuTextBox0" runat="server" Text='<%# Bind("MaThuongHieu") %>' />
+            <asp:TextBox ID="MaThuongHieuTextBox" runat="server" Text='<%# Bind("MaThuongHieu") %>' />
             <br />
             MaDanhMuc:
-            <asp:TextBox ID="MaDanhMucTextBox0" runat="server" Text='<%# Bind("MaDanhMuc") %>' />
+            <asp:TextBox ID="MaDanhMucTextBox" runat="server" Text='<%# Bind("MaDanhMuc") %>' />
             <br />
             TenSanPham:
-            <asp:TextBox ID="TenSanPhamTextBox0" runat="server" Text='<%# Bind("TenSanPham") %>' />
+            <asp:TextBox ID="TenSanPhamTextBox" runat="server" Text='<%# Bind("TenSanPham") %>' />
             <br />
             Gia:
-            <asp:TextBox ID="GiaTextBox0" runat="server" Text='<%# Bind("Gia") %>' />
+            <asp:TextBox ID="GiaTextBox" runat="server" Text='<%# Bind("Gia") %>' />
             <br />
             NongDo:
-            <asp:TextBox ID="NongDoTextBox0" runat="server" Text='<%# Bind("NongDo") %>' />
+            <asp:TextBox ID="NongDoTextBox" runat="server" Text='<%# Bind("NongDo") %>' />
             <br />
             XuatSu:
-            <asp:TextBox ID="XuatSuTextBox0" runat="server" Text='<%# Bind("XuatSu") %>' />
+            <asp:TextBox ID="XuatSuTextBox" runat="server" Text='<%# Bind("XuatSu") %>' />
             <br />
             NamPhatHanh:
-            <asp:TextBox ID="NamPhatHanhTextBox0" runat="server" Text='<%# Bind("NamPhatHanh") %>' />
+            <asp:TextBox ID="NamPhatHanhTextBox" runat="server" Text='<%# Bind("NamPhatHanh") %>' />
             <br />
             NhomHuong:
-            <asp:TextBox ID="NhomHuongTextBox0" runat="server" Text='<%# Bind("NhomHuong") %>' />
+            <asp:TextBox ID="NhomHuongTextBox" runat="server" Text='<%# Bind("NhomHuong") %>' />
             <br />
             PhongCach:
-            <asp:TextBox ID="PhongCachTextBox0" runat="server" Text='<%# Bind("PhongCach") %>' />
+            <asp:TextBox ID="PhongCachTextBox" runat="server" Text='<%# Bind("PhongCach") %>' />
             <br />
             DungTich:
-            <asp:TextBox ID="DungTichTextBox0" runat="server" Text='<%# Bind("DungTich") %>' />
+            <asp:TextBox ID="DungTichTextBox" runat="server" Text='<%# Bind("DungTich") %>' />
             <br />
             MoTa:
-            <asp:TextBox ID="MoTaTextBox0" runat="server" Text='<%# Bind("MoTa") %>' />
+            <asp:TextBox ID="MoTaTextBox" runat="server" Text='<%# Bind("MoTa") %>' />
             <br />
             Anh:
-            <asp:TextBox ID="AnhTextBox0" runat="server" Text='<%# Bind("Anh") %>' />
+            <asp:TextBox ID="AnhTextBox" runat="server" Text='<%# Bind("Anh") %>' />
             <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
         </InsertItemTemplate>
         <ItemTemplate>
-            <asp:Panel ID="Panel1" runat="server" CssClass="container mx-auto tbl-chitiet">
+            &nbsp;<asp:Panel ID="Panel1" runat="server" CssClass="container mx-auto tbl-chitiet">
                 <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Bind("TenSanPham") %>' CssClass=" d-block" Font-Bold="True" Font-Size="X-Large" ForeColor="#9B0E62" />
                 <br />
                 <table class="w-100">
@@ -181,6 +180,6 @@
             </asp:Panel>
         </ItemTemplate>
     </asp:FormView>
-    </div>
+    <br />
 </asp:Content>
 
