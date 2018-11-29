@@ -79,16 +79,16 @@
                 <tr>
                     <td style="width: 168px">Tên sản phẩm</td>
                     <td class="text-left" style="width: 351px">
-                        <asp:TextBox ID="TenSanPhamTextBox10" runat="server" Text='<%# Bind("TenSanPham") %>' Width="299px" />
-                        <asp:RequiredFieldValidator ID="reqtensp0" runat="server" ControlToValidate="TenSanPhamTextBox10" ErrorMessage="Tên sản phẩm không được để trống" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="TenSanPhamTextBox10" runat="server" Text='<%# Bind("TenSanPham") %>' Width="299px" ValidationGroup="validate_sua" />
+                        <asp:RequiredFieldValidator ID="reqtensp0" runat="server" ControlToValidate="TenSanPhamTextBox10" ErrorMessage="Tên sản phẩm không được để trống" ForeColor="#CC0000" ValidationGroup="validate_sua"></asp:RequiredFieldValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td style="width: 168px">Giá</td>
                     <td class="text-left" style="width: 351px">
-                        <asp:TextBox ID="GiaTextBox10" runat="server" Text='<%# Bind("Gia") %>' Width="297px" />
-                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="GiaTextBox10" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000000" MinimumValue="0" Type="Integer">Giá phải là số</asp:RangeValidator>
+                        <asp:TextBox ID="GiaTextBox10" runat="server" Text='<%# Bind("Gia") %>' Width="297px" ValidationGroup="validate_sua" />
+                        <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="GiaTextBox10" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000000" MinimumValue="0" Type="Integer" ValidationGroup="validate_sua">Giá phải là số</asp:RangeValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -109,8 +109,8 @@
                 <tr>
                     <td style="width: 168px">Năm phát hành</td>
                     <td class="text-left" style="width: 351px">
-                        <asp:TextBox ID="NamPhatHanhTextBox10" runat="server" Text='<%# Bind("NamPhatHanh") %>' Width="297px" />
-                        <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="NamPhatHanhTextBox10" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer">Năm phát hành phải là số</asp:RangeValidator>
+                        <asp:TextBox ID="NamPhatHanhTextBox10" runat="server" Text='<%# Bind("NamPhatHanh") %>' Width="297px" ValidationGroup="validate_sua" />
+                        <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="NamPhatHanhTextBox10" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer" ValidationGroup="validate_sua">Năm phát hành phải là số</asp:RangeValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -131,8 +131,8 @@
                 <tr>
                     <td style="width: 168px; height: 24px;">Dung tích</td>
                     <td class="text-left" style="width: 351px;">
-                        <asp:TextBox ID="DungTichTextBox10" runat="server" Text='<%# Bind("DungTich") %>' Width="293px" />
-                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="DungTichTextBox10" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer">Dung tích phải là số</asp:RangeValidator>
+                        <asp:TextBox ID="DungTichTextBox10" runat="server" Text='<%# Bind("DungTich") %>' Width="293px" ValidationGroup="validate_sua" />
+                        <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="DungTichTextBox10" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer" ValidationGroup="validate_sua">Dung tích phải là số</asp:RangeValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -162,7 +162,7 @@
                 </tr>
             </table>
             <br />
-            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Cập nhật"    />
+            <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Cập nhật" ValidationGroup="validate_sua"    />
             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Hủy bỏ" />
         </EditItemTemplate>
         <FooterStyle BackColor="#990000" ForeColor="White" Font-Bold="True" />
@@ -190,16 +190,16 @@
                 <tr>
                     <td style="width: 199px">Tên sản phẩm</td>
                     <td class="text-left">
-                        <asp:TextBox ID="TenSanPhamTextBox1" runat="server" Text='<%# Bind("TenSanPham") %>' />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TenSanPhamTextBox1" ErrorMessage="Tên sản phẩm không được để trống" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="TenSanPhamTextBox1" runat="server" Text='<%# Bind("TenSanPham") %>' ValidationGroup="validate_them" />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TenSanPhamTextBox1" ErrorMessage="Tên sản phẩm không được để trống" ForeColor="#CC0000" ValidationGroup="validate_them"></asp:RequiredFieldValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td style="width: 199px">Giá</td>
                     <td class="text-left">
-                        <asp:TextBox ID="GiaTextBox1" runat="server" Text='<%# Bind("Gia") %>' />
-                        <asp:RangeValidator ID="RangeValidator4" runat="server" ControlToValidate="GiaTextBox1" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000000" MinimumValue="0" Type="Integer">Giá phải là số</asp:RangeValidator>
+                        <asp:TextBox ID="GiaTextBox1" runat="server" Text='<%# Bind("Gia") %>' ValidationGroup="validate_them" />
+                        <asp:RangeValidator ID="RangeValidator4" runat="server" ControlToValidate="GiaTextBox1" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000000" MinimumValue="0" Type="Integer" ValidationGroup="validate_them">Giá phải là số</asp:RangeValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -220,8 +220,8 @@
                 <tr>
                     <td style="width: 199px">Năm phát hành</td>
                     <td class="text-left">
-                        <asp:TextBox ID="NamPhatHanhTextBox1" runat="server" Text='<%# Bind("NamPhatHanh") %>' />
-                        <asp:RangeValidator ID="RangeValidator5" runat="server" ControlToValidate="NamPhatHanhTextBox1" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer">Năm phát hành phải là số</asp:RangeValidator>
+                        <asp:TextBox ID="NamPhatHanhTextBox1" runat="server" Text='<%# Bind("NamPhatHanh") %>' ValidationGroup="validate_them" />
+                        <asp:RangeValidator ID="RangeValidator5" runat="server" ControlToValidate="NamPhatHanhTextBox1" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer" ValidationGroup="validate_them">Năm phát hành phải là số</asp:RangeValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -242,8 +242,8 @@
                 <tr>
                     <td style="width: 199px; height: 24px">Dung tích</td>
                     <td class="text-left">
-                        <asp:TextBox ID="DungTichTextBox1" runat="server" Text='<%# Bind("DungTich") %>' />
-                        <asp:RangeValidator ID="RangeValidator6" runat="server" ControlToValidate="DungTichTextBox1" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer">Dung tích phải là số</asp:RangeValidator>
+                        <asp:TextBox ID="DungTichTextBox1" runat="server" Text='<%# Bind("DungTich") %>' ValidationGroup="validate_them" />
+                        <asp:RangeValidator ID="RangeValidator6" runat="server" ControlToValidate="DungTichTextBox1" ErrorMessage="RangeValidator" ForeColor="Red" MaximumValue="1000000" MinimumValue="0" Type="Integer" ValidationGroup="validate_them">Dung tích phải là số</asp:RangeValidator>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -268,7 +268,7 @@
                 </tr>
             </table>
             <br />
-            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Tạo" />
+            <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Tạo" ValidationGroup="validate_them" />
             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Hủy bỏ" />
         </InsertItemTemplate>
         <ItemTemplate>

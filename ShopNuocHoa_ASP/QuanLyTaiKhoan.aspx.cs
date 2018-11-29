@@ -84,11 +84,6 @@ public partial class QuanLyTaiKhoan :  System.Web.UI.Page
     protected void GridView_dstaikhoan_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         Label_error.Text = "";
-        RequiredFieldValidator_tendn.Enabled = true;
-        RequiredFieldValidator_matkhau.Enabled = true;
-        RequiredFieldValidator_hoten.Enabled = true;
-        RequiredFieldValidator_diachi.Enabled = true;
-        RequiredFieldValidator_sodt.Enabled = true;
     }
 
     protected void GridView_dstaikhoan_RowDeleted(object sender, GridViewDeletedEventArgs e)
@@ -129,13 +124,5 @@ public partial class QuanLyTaiKhoan :  System.Web.UI.Page
             Label_error.Text = "Có lỗi xảy ra khi sửa tài khoản!";
             e.ExceptionHandled = true;
         }
-    }
-    protected void GridView_dstaikhoan_RowEditing(object sender, GridViewEditEventArgs e)
-    {
-        RequiredFieldValidator_tendn.Enabled = false;
-        RequiredFieldValidator_matkhau.Enabled = false;
-        RequiredFieldValidator_hoten.Enabled = false;
-        RequiredFieldValidator_diachi.Enabled = false;
-        RequiredFieldValidator_sodt.Enabled = false;
     }
 }
