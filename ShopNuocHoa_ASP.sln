@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2047
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ShopNuocHoa_ASP", "ShopNuocHoa_ASP\", "{CF63F246-19E6-41D2-B9BE-25EE5F9C252E}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50317"
 		Debug.AspNetCompiler.PhysicalPath = "ShopNuocHoa_ASP\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50317\"
@@ -21,7 +19,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ShopNuocHoa_ASP", "ShopNuoc
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "50317"
-		SlnRelativePath = "ShopNuocHoa_ASP\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -38,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8EEB0B1-D29F-44D5-A3AE-DBB191F0EFC7}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
