@@ -69,11 +69,6 @@ public partial class QuanLyTaiKhoanKhachHang :  System.Web.UI.Page
     {
         Label_error.Text = "";
         SqlDataSource_dskhachhang.UpdateParameters["admin"].DefaultValue = "0";
-        RequiredFieldValidator_tendn.Enabled = true;
-        RequiredFieldValidator_matkhau.Enabled = true;
-        RequiredFieldValidator_hoten.Enabled = true;
-        RequiredFieldValidator_diachi.Enabled = true;
-        RequiredFieldValidator_sodt.Enabled = true;
     }
 
     protected void GridView_dskhachhang_RowDeleted(object sender, GridViewDeletedEventArgs e)
@@ -114,13 +109,5 @@ public partial class QuanLyTaiKhoanKhachHang :  System.Web.UI.Page
             Label_error.Text = "Có lỗi xảy ra khi sửa tài khoản khách hàng!";
             e.ExceptionHandled = true;
         }
-    }
-    protected void GridView_dskhachhang_RowEditing(object sender, GridViewEditEventArgs e)
-    {
-        RequiredFieldValidator_tendn.Enabled = false;
-        RequiredFieldValidator_matkhau.Enabled = false;
-        RequiredFieldValidator_hoten.Enabled = false;
-        RequiredFieldValidator_diachi.Enabled = false;
-        RequiredFieldValidator_sodt.Enabled = false;
     }
 }

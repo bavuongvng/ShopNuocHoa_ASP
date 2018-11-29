@@ -90,19 +90,8 @@ public partial class QuanLyDanhMucAdmin :  System.Web.UI.Page
 
     }
 
-
-
-
-
-    protected void GridView_dsdanhmuc_RowEditing(object sender, GridViewEditEventArgs e)
-    {
-        RequiredFieldValidator4.Enabled = false;
-       
-    }
-
     protected void GridView_dsdanhmuc_RowCommand(object sender, GridViewCommandEventArgs e)
     {
         lblthongbao.Text = "";
-        RequiredFieldValidator4.Enabled = true;
     }
 }

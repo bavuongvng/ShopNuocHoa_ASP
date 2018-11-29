@@ -5,7 +5,7 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:GridView ID="GridView_dsdanhmuc" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="MaDanhMuc" DataSourceID="SqlDataSource_dsdanhmuc" ForeColor="#333333" GridLines="None" OnRowDeleted="gvdanhmuc_RowDeleted" OnRowUpdated="GridView_dsdanhmuc_RowUpdated" Width="829px" OnRowUpdating="GridView_dsdanhmuc_RowUpdating" OnRowCommand="GridView_dsdanhmuc_RowCommand" OnRowEditing="GridView_dsdanhmuc_RowEditing" >
+        <asp:GridView ID="GridView_dsdanhmuc" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="MaDanhMuc" DataSourceID="SqlDataSource_dsdanhmuc" ForeColor="#333333" GridLines="None" OnRowDeleted="gvdanhmuc_RowDeleted" OnRowUpdated="GridView_dsdanhmuc_RowUpdated" Width="829px" OnRowUpdating="GridView_dsdanhmuc_RowUpdating" OnRowCommand="GridView_dsdanhmuc_RowCommand" >
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="MaDanhMuc" HeaderText="Mã danh mục" InsertVisible="False" ReadOnly="True" SortExpression="MaDanhMuc" />
@@ -49,15 +49,15 @@
                 <asp:Label ID="Label2" runat="server" Text="Tên danh mục"></asp:Label>
                 :</td>
             <td style="text-align: left">
-                <asp:TextBox ID="txtten" runat="server" Width="339px"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtten" ErrorMessage="Tên danh mục không được để trống" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:TextBox ID="txtten" runat="server" Width="339px" ValidationGroup="validate_them"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtten" ErrorMessage="Tên danh mục không được để trống" ForeColor="Red" ValidationGroup="validate_them"></asp:RequiredFieldValidator>
             </td>
         </tr>
     </table>
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </strong>
-    <asp:Button ID="btnthem" runat="server" OnClick="btnthem_Click" Text="Thêm mới" />
+    <asp:Button ID="btnthem" runat="server" OnClick="btnthem_Click" Text="Thêm mới" ValidationGroup="validate_them" />
     <br />
     <asp:Label ID="lblthongbao" runat="server"></asp:Label>
     <br />

@@ -7,7 +7,7 @@
         <tr>
             <td style="width: 40px">&nbsp;&nbsp;</td>
             <td>
-    <asp:GridView ID="GridView_dstaikhoan" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="TenDangNhap" DataSourceID="SqlDataSource_dstaikhoan" OnRowCommand="GridView_dstaikhoan_RowCommand" OnRowDeleted="GridView_dstaikhoan_RowDeleted" OnRowUpdated="GridView_dstaikhoan_RowUpdated" OnRowEditing="GridView_dstaikhoan_RowEditing">
+    <asp:GridView ID="GridView_dstaikhoan" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="TenDangNhap" DataSourceID="SqlDataSource_dstaikhoan" OnRowCommand="GridView_dstaikhoan_RowCommand" OnRowDeleted="GridView_dstaikhoan_RowDeleted" OnRowUpdated="GridView_dstaikhoan_RowUpdated">
         <Columns>
             <asp:BoundField DataField="TenDangNhap" HeaderText="Tên tài khoản" ReadOnly="True" SortExpression="TenDangNhap" />
             <asp:BoundField DataField="MatKhau" HeaderText="Mật khẩu" SortExpression="MatKhau" />
@@ -54,8 +54,8 @@
                 <asp:Label ID="Label_tendn" runat="server" AssociatedControlID="TextBox_tendn" Text="Tên tài khoản:"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="TextBox_tendn" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator_tendn" runat="server" ControlToValidate="TextBox_tendn" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Tên tài khoản không được để trống!</asp:RequiredFieldValidator>
+                <asp:TextBox ID="TextBox_tendn" runat="server" ValidationGroup="validate_them"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator_tendn" runat="server" ControlToValidate="TextBox_tendn" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="validate_them">Tên tài khoản không được để trống!</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -64,8 +64,8 @@
                 <asp:Label ID="Label_matkhau" runat="server" Text="Mật khẩu:" AssociatedControlID="TextBox_matkhau"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="TextBox_matkhau" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator_matkhau" runat="server" ControlToValidate="TextBox_matkhau" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Mật khẩu không được để trống!</asp:RequiredFieldValidator>
+                <asp:TextBox ID="TextBox_matkhau" runat="server" ValidationGroup="validate_them"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator_matkhau" runat="server" ControlToValidate="TextBox_matkhau" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="validate_them">Mật khẩu không được để trống!</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -74,8 +74,8 @@
                 <asp:Label ID="Label_hoten" runat="server" Text="Họ tên:" AssociatedControlID="TextBox_hoten"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="TextBox_hoten" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator_hoten" runat="server" ControlToValidate="TextBox_hoten" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Họ tên không được để trống!</asp:RequiredFieldValidator>
+                <asp:TextBox ID="TextBox_hoten" runat="server" ValidationGroup="validate_them"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator_hoten" runat="server" ControlToValidate="TextBox_hoten" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="validate_them">Họ tên không được để trống!</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -84,8 +84,8 @@
                 <asp:Label ID="Label_diachi" runat="server" Text="Địa chỉ:" AssociatedControlID="TextBox_diachi"></asp:Label>
             </td>
             <td style="height: 25px">
-                <asp:TextBox ID="TextBox_diachi" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator_diachi" runat="server" ControlToValidate="TextBox_diachi" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Địa chỉ không được để trống!</asp:RequiredFieldValidator>
+                <asp:TextBox ID="TextBox_diachi" runat="server" ValidationGroup="validate_them"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator_diachi" runat="server" ControlToValidate="TextBox_diachi" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="validate_them">Địa chỉ không được để trống!</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -94,8 +94,8 @@
                 <asp:Label ID="Label_sodt" runat="server" Text="Số điện thoại:" AssociatedControlID="TextBox_sodt"></asp:Label>
             </td>
             <td style="height: 25px">
-                <asp:TextBox ID="TextBox_sodt" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator_sodt" runat="server" ControlToValidate="TextBox_sodt" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Số điện thoại không được để trống!</asp:RequiredFieldValidator>
+                <asp:TextBox ID="TextBox_sodt" runat="server" ValidationGroup="validate_them"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator_sodt" runat="server" ControlToValidate="TextBox_sodt" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ForeColor="Red" ValidationGroup="validate_them">Số điện thoại không được để trống!</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -118,7 +118,7 @@
         </tr>
     </table>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-    <asp:Button ID="Button_them" runat="server" Text="Thêm" OnClick="Button_them_Click" />
+    <asp:Button ID="Button_them" runat="server" Text="Thêm" OnClick="Button_them_Click" ValidationGroup="validate_them" />
     <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
     <asp:Label ID="Label_error" runat="server" ForeColor="Red"></asp:Label>
