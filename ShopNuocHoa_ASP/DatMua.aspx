@@ -46,6 +46,24 @@
                 <asp:Parameter Name="MaDonHang" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:SqlDataSource ID="sqlChiTietDonHang" runat="server" ConnectionString="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" DeleteCommand="DELETE FROM [ChiTietDonHang] WHERE [MaDonHang] = @MaDonHang AND [MaSanPham] = @MaSanPham" InsertCommand="INSERT INTO [ChiTietDonHang] ([MaDonHang], [MaSanPham], [SoLuong]) VALUES (@MaDonHang, @MaSanPham, @SoLuong)" SelectCommand="SELECT * FROM [ChiTietDonHang]" UpdateCommand="UPDATE [ChiTietDonHang] SET [SoLuong] = @SoLuong WHERE [MaDonHang] = @MaDonHang AND [MaSanPham] = @MaSanPham">
+            <DeleteParameters>
+                <asp:Parameter Name="MaDonHang" Type="Int32" />
+                <asp:Parameter Name="MaSanPham" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="MaDonHang" Type="Int32" />
+                <asp:Parameter Name="MaSanPham" Type="Int32" />
+                <asp:Parameter Name="SoLuong" Type="Int32" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="SoLuong" Type="Int32" />
+                <asp:Parameter Name="MaDonHang" Type="Int32" />
+                <asp:Parameter Name="MaSanPham" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+        <asp:Label ID="lblLoi" runat="server"></asp:Label>
+        <br />
     </div>
 </asp:Content>
 
