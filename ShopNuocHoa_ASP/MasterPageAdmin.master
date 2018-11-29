@@ -39,10 +39,14 @@
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink3" runat="server" NavigateUrl="~/QuanLyDanhMuc.aspx">
                         <i class="material-icons">dashboard</i>
                         Quản Lý danh mục</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu" ID="HyperLink4" runat="server" NavigateUrl="~/QuanLySanPham.aspx">Quản Lý sản phẩm</asp:HyperLink>
-                    <asp:HyperLink CssClass="items-menu" ID="HyperLink5" runat="server" NavigateUrl="~/QuanLyDonHang.aspx">Quản Lý đơn hàng</asp:HyperLink>
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink4" runat="server" NavigateUrl="~/QuanLySanPham.aspx">
+                        <i class="material-icons">event</i>
+                        Quản Lý sản phẩm</asp:HyperLink>
+                    <asp:HyperLink CssClass="items-menu" ID="HyperLink5" runat="server" NavigateUrl="~/QuanLyDonHang.aspx">
+                        <i class="material-icons">poll  </i>
+                        Quản Lý đơn hàng</asp:HyperLink>
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink6" runat="server" NavigateUrl="~/QuanLyTaiKhoan.aspx">
-                        <i class="material-icons">people</i>
+                        <i class="material-icons">person</i>
                         Quản Lý tài khoản</asp:HyperLink>
                     <asp:HyperLink CssClass="items-menu" ID="HyperLink1" runat="server" NavigateUrl="~/QuanLyTaiKhoanKhachHang.aspx">
                         <i class="material-icons">people</i>
