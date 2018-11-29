@@ -4,7 +4,7 @@
     <div class="container danhmuc">
         <div class="left-danhmuc">
             <asp:sqldatasource id="sqlDsDanhMuc" runat="server" connectionstring="<%$ ConnectionStrings:SHOPNUOCHOAConnectionString %>" selectcommand="SELECT * FROM [DanhMuc]"></asp:sqldatasource>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MaDanhMuc" DataSourceID="sqlDsDanhMuc" CssClass="danh-muc">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="MaDanhMuc" DataSourceID="sqlDsDanhMuc" CssClass="danh-muc" Height="300px">
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFields="maDanhMuc" DataNavigateUrlFormatString="~/DanhMucNuocHoa.aspx?madanhmuc={0}" DataTextField="TenDanhMuc" NavigateUrl="~/DanhMucNuocHoa.aspx" HeaderText="Danh mục" Text="Danh mục" >
                     <HeaderStyle BackColor="#1055F1" Font-Bold="True" Font-Size="X-Large" HorizontalAlign="Justify" VerticalAlign="Middle" CssClass="danhmuc-header" ForeColor="White" Height="50px" />
@@ -18,7 +18,7 @@
                     <asp:QueryStringParameter Name="MaDanhMuc" QueryStringField="madanhmuc" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:ListView ID="ListView1" runat="server" DataSourceID="sqlDsSanPham" GroupItemCount="4">
+            <asp:ListView ID="lvSanPham" runat="server" DataSourceID="sqlDsSanPham" GroupItemCount="4">
                 <AlternatingItemTemplate>
                     <td runat="server" class="product-item">
                         <asp:Label ID="TenSanPhamLabel" runat="server" Text='<%# Eval("TenSanPham") %>' CssClass="product-name" />
@@ -28,7 +28,7 @@
                         <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' CssClass="product-price" />
                         <br />
                         <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>' CssClass="btn btn-success btn-sm btn-action" Width="40%">Chi tiết</asp:LinkButton>
-                        <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/GioHang.aspx" CssClass="btn btn-primary btn-sm btn-action" Width="40%">Đặt mua</asp:LinkButton>
+                        <asp:LinkButton ID="btnThemGioHang" runat="server"  CssClass="btn btn-primary btn-sm btn-action" Width="40%"  PostBackUrl='<%# Eval("MaSanPham", "GioHang.aspx?MaSanPham={0}") %>'>Đặt mua</asp:LinkButton>
                         <br /></td>
                 </AlternatingItemTemplate>
                 <EditItemTemplate>
@@ -91,7 +91,7 @@
                         <asp:Label ID="GiaLabel" runat="server" Text='<%# Eval("Gia") %>' CssClass="product-price"></asp:Label>
                         <br />
                         <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>' CssClass="btn btn-sm btn-success btn-action" ForeColor="White" Width="40%">Chi tiết</asp:LinkButton>
-                        <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/GioHang.aspx" CssClass="btn btn-sm btn-primary btn-action" Width="40%">Đặt mua</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl='<%# Eval("MaSanPham", "GioHang.aspx?MaSanPham={0}") %>' CssClass="btn btn-sm btn-primary btn-action" Width="40%">Đặt mua</asp:LinkButton>
                     </td>
                 </ItemTemplate>
                 <LayoutTemplate>
@@ -131,7 +131,7 @@
                         <br /></td>
                 </SelectedItemTemplate>
             </asp:ListView>
-            <br />
+            &nbsp;<br />
         </div>
     </div>
 </asp:Content>

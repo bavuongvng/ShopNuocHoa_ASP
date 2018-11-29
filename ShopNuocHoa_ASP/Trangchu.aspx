@@ -44,7 +44,7 @@
                     <asp:Label ID="GiaLabel" runat="server" CssClass="product-price" Text='<%# Eval("Gia") %>'></asp:Label>
                     <br />
                     <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-success btn-sm btn-action" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>' Width="40%">Chi tiết</asp:LinkButton>
-                    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary btn-sm btn-action" PostBackUrl="~/GioHang.aspx" Width="40%">Đặt mua</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary btn-sm btn-action" PostBackUrl='<%# Eval("MaSanPham", "~/GioHang.aspx?MaSanPham={0}") %>' Width="40%">Đặt mua</asp:LinkButton>
                     <br />
                 </td>
             </AlternatingItemTemplate>
@@ -104,7 +104,7 @@
                     <asp:Label ID="GiaLabel" runat="server" CssClass="product-price" Text='<%# Eval("Gia") %>'></asp:Label>
                     <br />
                     <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-success btn-sm btn-action" PostBackUrl='<%# Eval("MaSanPham", "~/Chitietnuochoa.aspx?MaSanPham={0}") %>' Width="40%">Chi tiết</asp:LinkButton>
-                    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary btn-sm btn-action" PostBackUrl="~/GioHang.aspx" Width="40%">Đặt mua</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" CssClass="btn btn-primary btn-sm btn-action" PostBackUrl='<%# Eval("MaSanPham", "~/GioHang.aspx?MaSanPham={0}") %>' Width="40%">Đặt mua</asp:LinkButton>
                 </td>
             </ItemTemplate>
             <LayoutTemplate>
