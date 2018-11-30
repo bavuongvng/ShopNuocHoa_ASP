@@ -9,9 +9,9 @@
 ### Danh sách thành viên:
 * Nguyễn Bá Vương
 * Nguyễn Danh Tuyên
-* Nguyễn Hằng Ly
+* Nguyễn Minh Chính
 * Nguyễn Khắc Nam
-* Ngô Thị Dung
+* Vũ Duy Chinh
 
 ## Download
 ```
