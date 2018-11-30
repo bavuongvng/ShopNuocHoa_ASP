@@ -31,4 +31,18 @@ public partial class MasterPage : System.Web.UI.MasterPage
         Session.Remove("user");
         Response.Redirect("Trangchu.aspx");
     }
+
+    protected void lbtnGioHang_Click(object sender, EventArgs e)
+    {
+        ShoppingCart aCart;
+        if (Session["CartItem"] == null)
+        {
+            aCart = new ShoppingCart();
+        }
+        else
+        {
+            aCart = (ShoppingCart)Session["CartItem"];
+        }
+        Response.Redirect("GioHang.aspx");
+    }
 }

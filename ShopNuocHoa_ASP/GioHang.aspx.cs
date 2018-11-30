@@ -10,6 +10,16 @@ public partial class GioHang : System.Web.UI.Page
     ShoppingCart aCart;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["CartItem"] == null)
+        {
+            aCart = new ShoppingCart();
+        }
+        else
+        {
+            aCart = (ShoppingCart)Session["CartItem"];
+        }
+
+        BindGrid(aCart);
 
         if (gvGioHang.Rows.Count < 0)
         {
