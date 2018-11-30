@@ -61,5 +61,35 @@
     <br />
     <asp:Label ID="lblthongbao" runat="server"></asp:Label>
     <br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </asp:Content>
 

@@ -97,3 +97,7 @@ body {
     position: absolute;
     left: 260px;
 }
+
+th{
+    text-align: center ;
+}

@@ -42,16 +42,16 @@
                         <%--End Logo--%>
                         <div class="ml-2 search">
                             <div class="search-form position-relative">
-                                <form action="">
+                                <form action="~/TimKiemNuocHoa.aspx"> 
                                     <input type="search" class="form-control" placeholder="Tìm kiếm nước hoa..." />
-                                    <button type="submit" class="btn bg-transparent position-absolute btn-search">
-                                        <i class="material-icons">search</i>
-                                    </button>
+                                        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/TimKiemNuocHoa.aspx" CssClass="btn bg-transparent position-absolute btn-search" runat="server"> 
+                                            <i class="material-icons">search</i></asp:HyperLink>
+                       
                                 </form>
                             </div>
                             <div class="ddl-search ml-2">
                                 <div class="dropdown">
-                                    <button type="button" class="btn bg-transparent border-dark dropdown-toggle" data-toggle="dropdown">
+                                    <button type="button"  class="btn bg-transparent border-dark dropdown-toggle" data-toggle="dropdown">
                                         Chọn thương hiệu
                                     </button>
                                     <div class="dropdown-menu bg-white">
