@@ -28,6 +28,9 @@ public partial class DangKy : System.Web.UI.Page
             Account account = new Account();
             account.Username = txtUername.Text;
             account.Password = txtPassword.Text;
+            account.DiaChi = txtDiaChi.Text;
+            account.HoTen = txtHoTen.Text;
+            account.SoDT = txtSoDT.Text;
 
             Session.Add("tenUser", txtHoTen.Text);
             Session.Add("user", account);

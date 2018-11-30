@@ -7,13 +7,13 @@
         </h1>
     </div>
     <div style="text-align:center">
-        <asp:Label ID="Label1" runat="server" Text="Họ tên:" Width="150px"></asp:Label><asp:TextBox ID="txtHoTen" runat="server" Width="300px" ValidationGroup="vldThongBao" BorderStyle="None" EnableTheming="True" ReadOnly="True"></asp:TextBox>
+        <asp:Label ID="Label1" runat="server" Text="Họ tên:" Width="150px"></asp:Label><asp:TextBox ID="txtHoTen" runat="server" Width="300px" ValidationGroup="vldThongBao" EnableTheming="True"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtHoTen" ErrorMessage="Bạn cần nhập họ tên" ForeColor="Red" ValidationGroup="vldThongBao" Width="200px"></asp:RequiredFieldValidator>
     <br />
-        <asp:Label ID="Label2" runat="server" Text="Số điện thoại: " Width="150px"></asp:Label><asp:TextBox ID="txtSoDT" runat="server" Width="300px" ValidationGroup="vldThongBao" BorderStyle="None" ReadOnly="True"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="Số điện thoại: " Width="150px"></asp:Label><asp:TextBox ID="txtSoDT" runat="server" Width="300px" ValidationGroup="vldThongBao"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSoDT" ErrorMessage="Bạn cần nhập số điện thoại" ForeColor="Red" ValidationGroup="vldThongBao" Width="200px"></asp:RequiredFieldValidator>
     <br />
-        <asp:Label ID="Label3" runat="server" Text="Địa chỉ: " Width="150px"></asp:Label><asp:TextBox ID="txtDiaChi" runat="server" Width="300px" ValidationGroup="vldThongBao" BorderStyle="None" ReadOnly="True"></asp:TextBox>
+        <asp:Label ID="Label3" runat="server" Text="Địa chỉ: " Width="150px"></asp:Label><asp:TextBox ID="txtDiaChi" runat="server" Width="300px" ValidationGroup="vldThongBao"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDiaChi" ErrorMessage="Bạn cần nhập địa chỉ" ForeColor="Red" ValidationGroup="vldThongBao" Width="200px"></asp:RequiredFieldValidator>
     <br />
         <asp:Label ID="Label4" runat="server" Text="Tên đăng nhập: " Width="150px"></asp:Label><asp:TextBox ID="txtTenDangNhap" runat="server" Width="300px" ValidationGroup="vldThongBao" BorderStyle="None" ReadOnly="True"></asp:TextBox>
