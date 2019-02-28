@@ -99,7 +99,10 @@ body {
 }
 
 th{
-    text-align: center ;
+    text-align: center !important ;
+}
+.mybutton{
+    background-color:#ffffff !important;
 }
 /*Login*/
 .login-form {

@@ -38,7 +38,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <div style="width: 100%">
-            <asp:ListView ID="ListView1" runat="server" DataKeyNames="MaDonHang" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand"    >
+            <asp:ListView ID="ListView1" runat="server" DataKeyNames="MaDonHang" DataSourceID="SqlDataSource1" OnItemCommand="ListView1_ItemCommand" OnItemCanceling="ListView1_ItemCanceling" OnItemInserting="ListView1_ItemInserting" OnItemUpdating="ListView1_ItemUpdating"    >
                 <AlternatingItemTemplate>
                     <tr style="background-color: #FFFFFF; color: #333333;">
                         <td style=" text-align:center">
@@ -435,7 +435,7 @@
                         <td runat="server">
                             <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF; border-collapse: collapse; border-color: #999999; border-style: none; border-width: 1px; font-family: Verdana, Arial, Helvetica, sans-serif;">
                               <tr runat="server" style="background-color: #FFFFFF;height:35px; color: #333333;">
-                                   <th style="color:black;font-size:15px" runat="server">Ảnh</th>
+                                    <th style="color:black;font-size:12px" runat="server">Ảnh</th>
                                     <th  style="color:black;font-size:15px" runat="server">Tên Sản phẩm</th>
                                     <th  style="color:black;font-size:15px" runat="server">Giá</th>
                                     <th  style="color:black;font-size:15px" runat="server">Số Lượng</th>

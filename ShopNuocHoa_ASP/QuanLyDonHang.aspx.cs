@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 public partial class QuanLyDonHang :  System.Web.UI.Page
 {
-     string connString = @"Data Source=DESKTOP-8CLAMD9;Initial Catalog=SHOPNUOCHOA;Integrated Security=True";
+     string connString = @"Data Source=DESKTOP-FMUF9B2;Initial Catalog=SHOPNUOCHOA;Integrated Security=True";
 
   
     protected void Page_Load(object sender, EventArgs e)
@@ -46,13 +46,13 @@ public partial class QuanLyDonHang :  System.Web.UI.Page
             ListView2.DataSource = dataTable2;
             ListView2.DataBind();
 
+
             DataTable dataTable3 = new DataTable();
             SqlDataAdapter adapter3 = new SqlDataAdapter("  SELECT  Sum( Gia*SoLuong) as 'ThanhTien' FROM  DonHang inner join ChiTietDonHang on DonHang.MaDonHang = ChiTietDonHang.MaDonHang inner join SanPham on ChiTietDonHang.MaSanPham = SanPham.MaSanPham where DonHang.MaDonHang = '" + a + "'", sqlConn);
             adapter3.Fill(dataTable3);
             FormView2.DataSourceID = "";
             FormView2.DataSource = dataTable3;
-            FormView2.DataBind();
-
+            FormView2.DataBind(); 
             sqlConn.Close();
         }
     }
@@ -71,6 +71,46 @@ public partial class QuanLyDonHang :  System.Web.UI.Page
             ListView2.DataBind();
         }
 
-         
-      
+
+
+
+    protected void ListView1_ItemUpdating(object sender, ListViewUpdateEventArgs e)
+    {
+        FormView1.DataSourceID = "";
+        FormView1.DataSource = null;
+        FormView1.DataBind();
+        FormView2.DataSourceID = "";
+        FormView2.DataSource = null;
+        FormView2.DataBind();
+        ListView2.DataSourceID = "";
+        ListView2.DataSource = null;
+        ListView2.DataBind();
+
+    }
+
+    protected void ListView1_ItemInserting(object sender, ListViewInsertEventArgs e)
+    {
+        FormView1.DataSourceID = "";
+        FormView1.DataSource = null;
+        FormView1.DataBind();
+        FormView2.DataSourceID = "";
+        FormView2.DataSource = null;
+        FormView2.DataBind();
+        ListView2.DataSourceID = "";
+        ListView2.DataSource = null;
+        ListView2.DataBind();
+    }
+
+    protected void ListView1_ItemCanceling(object sender, ListViewCancelEventArgs e)
+    {
+        FormView1.DataSourceID = "";
+        FormView1.DataSource = null;
+        FormView1.DataBind();
+        FormView2.DataSourceID = "";
+        FormView2.DataSource = null;
+        FormView2.DataBind();
+        ListView2.DataSourceID = "";
+        ListView2.DataSource = null;
+        ListView2.DataBind();
+    }
 }
