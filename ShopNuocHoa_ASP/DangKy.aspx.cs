@@ -19,7 +19,7 @@ public partial class DangKy : System.Web.UI.Page
         sqlTaiKhoan.InsertParameters["HoTen"].DefaultValue = txtHoTen.Text;
         sqlTaiKhoan.InsertParameters["DiaChi"].DefaultValue = txtDiaChi.Text;
         sqlTaiKhoan.InsertParameters["SoDT"].DefaultValue = txtSoDT.Text;
-        sqlTaiKhoan.InsertParameters["admin"].DefaultValue = "1";
+        sqlTaiKhoan.InsertParameters["admin"].DefaultValue = "0";
         sqlTaiKhoan.InsertParameters["tinhTrang"].DefaultValue = "1";
         try
         {
@@ -28,6 +28,9 @@ public partial class DangKy : System.Web.UI.Page
             Account account = new Account();
             account.Username = txtUername.Text;
             account.Password = txtPassword.Text;
+            account.DiaChi = txtDiaChi.Text;
+            account.HoTen = txtHoTen.Text;
+            account.SoDT = txtSoDT.Text;
 
             Session.Add("tenUser", txtHoTen.Text);
             Session.Add("user", account);

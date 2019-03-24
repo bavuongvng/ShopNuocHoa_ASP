@@ -29,6 +29,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void HyperDX_Click(object sender, EventArgs e)
     {
         Session.Remove("user");
+        Session.Remove("tenUser");
+        
+        if(Session["CartItem"] != null)
+        {
+            Session.Remove("CartItem");
+        }
         Response.Redirect("Trangchu.aspx");
     }
 
